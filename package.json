@@ -4,7 +4,6 @@
   "description": "Multiple projects will be placed in here\r This will be comprised of my personal website, animal shelter web app, and many more",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "start": "run server.js"
   },
