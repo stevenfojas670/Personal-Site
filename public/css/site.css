@@ -1,11 +1,6 @@
 .navbar{
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.5);
-    position: relative;
-    background-color: transparent;
-}
-
-.navbar .container-fluid{
+    background-color: rgba(228, 228, 228, 0);
 }
 
 .navbar .navbar-brand{
@@ -13,7 +8,7 @@
 }
 
 .navbar-nav .nav-link{
-    color: white;
+    color: black;
 }
 
 .navbar-nav .nav-link:hover{
@@ -24,10 +19,50 @@
     color: rgb(216, 157, 47);
 }
 
-.bg-image{
-    height: 100vh; 
+.main-content-header{
+    padding-top: 3em;
+    height: 100vh;
     width: auto;
-    position: relative;
-    z-index: 0;
 }
 
+.card{
+    max-width: 50em;
+}
+
+.body-tabs{
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.rounded-thumbnail{
+    width: 30em;
+    height: 30em;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 8px 15px 1px rgba(0, 0, 0, 0.5);
+}
+
+.rounded-thumbnail img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+@media (max-width: 768px){
+    .rounded-thumbnail{
+        max-width: 18em;
+        max-height: 18em;
+    }
+}
+
+.createdAlerts{
+    position: fixed; /* Use 'fixed' for an overlay that stays in the same position while scrolling */;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000 !important; /* Set a high z-index value to ensure the overlay appears above other elements */
+}
