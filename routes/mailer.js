@@ -1,10 +1,37 @@
 const express = require('express');
 const router = express.Router();
+const nodemailer = require('nodemailer');
+require('dotenv').config();
 
 //Backend functions
 router.post('/SendEmail', async (req, res) => {
-        console.log('Email sent');
-        res.send('AJAX request handled in mailer.js');
+    console.log(req.body);
+
+    const transporter = nodemailer.createTransport({
+        service: 'SMTP',
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS
+        }
+    });
+
+    const mailOptions = {
+        from: req.body.email,
+        to: process.env.EMAIL_USER,
+        subject: `Message from ${req.body.email}: ${req.body.subject}`,
+        text: req.body.message
+    }
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if(error){
+            console.log(error);
+            res.status(500).send('Error sending email');
+        } 
+        else {
+            console.log(`Email sent: ${info.response}`);
+            res.status(200).send('Email sent successfully');
+        }
+    });
 });
 
 module.exports = router;

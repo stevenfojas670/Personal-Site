@@ -12,9 +12,15 @@ function SetEventListeners(){
     });
 
     $(document).on('click', '#submit', function(){
+        var message = {
+            email: $('#email').val(),
+            subject: $('#subject').val(),
+            message: $('#message').val()
+        }
+
         //ajax call to send email
         $.ajax({
-            data: { email: $('#email').val(), message: $('#message').val() },
+            data: message,
             url: '/mailer/SendEmail',
             method: 'POST',
             success: function(res){
