@@ -8,7 +8,7 @@ router.post('/SendEmail', async (req, res) => {
     console.log(req.body);
 
     const transporter = nodemailer.createTransport({
-        service: 'SMTP',
+        service: 'gmail',
         auth: {
             user: process.env.EMAIL_USER,
             pass: process.env.EMAIL_PASS
@@ -22,16 +22,17 @@ router.post('/SendEmail', async (req, res) => {
         text: req.body.message
     }
 
-    transporter.sendMail(mailOptions, (error, info) => {
+    transporter.verify(function (error, info){
         if(error){
             console.log(error);
-            res.status(500).send('Error sending email');
-        } 
-        else {
-            console.log(`Email sent: ${info.response}`);
+            res.status(500).send('Email could not be sent');
+        }
+        else{
+            console.log(info.response);
             res.status(200).send('Email sent successfully');
         }
-    });
+    })
+    
 });
 
 module.exports = router;
