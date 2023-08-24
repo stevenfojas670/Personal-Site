@@ -56,26 +56,40 @@
   </nav>
   <div class="main-content container-wide">
     <div class="header">
-      <div class="header-content d-flex justify-content-start align-items-center">
+      <div class="header-content d-flex">
         <div class="header-items d-flex flex-column">
-          <h1 class="name">Steven Fojas</h1>
-          <div class="d-flex gap-3 justify-content-end">
+          <div class="d-flex flex-wrap">
+            <h1 class="display-1 name">Steven Fojas</h1>
+          </div>
+          <div class="d-flex header-links">
             <a href="https://www.linkedin.com/in/steven-fojas-8a1516241/" target="_blank">
-              <button class="btn btn-outline-light btn-lg" type="button">Linkedin</button>
+              <button class="btn btn-outline-light btn-lg" id="linkedinLink" type="button">Linkedin</button>
             </a>
             <a href="https://github.com/stevenfojas670" target="_blank">
-              <button class="btn btn-light btn-lg" type="button">github</button>
+              <button class="btn btn-lg" id="githubLink" type="button">github</button>
             </a>
           </div>
         </div>
-        <button class="btn btn-outline-light"><i class="fas fa-angle-down"></i></button>
     </div>
+    <div class="next-button"><a href="#about"><i class="fas fa-circle-chevron-down fa-3x"></i></a></div>
     <div class="main-content-body">
-      <div class="body-tabs" id="about">
-
+      <div class="body-tabs container d-flex justify-content-center align-items-center" id="about">
+        <div class="row">
+          <div class="col">
+            <div class="rounded-thumbnail">
+              <img src="/images/Steven_Fojas-4199.jpg">
+            </div>
+          </div>
+          <div class="col">
+            <div class="about-text h-100 d-flex flex-column justify-content-center">
+              <h1 class="display-6">About Me</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quos nesciunt distinctio mollitia aliquam optio quam asperiores in sed, eum eveniet iure veritatis. Magnam, nam repudiandae aspernatur tempore cum beatae.</p>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="body-tabs" id="experience">
-
+        
       </div>
       <div class="body-tabs" id="skills">
 
