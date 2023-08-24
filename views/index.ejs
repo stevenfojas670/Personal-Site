@@ -13,15 +13,16 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <!-- MDB -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Font1|Font2&display=swap">
+
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container-fluid text-dark">
-      <a class="navbar-brand text-dark" href="#top"><strong>Steven Fojas</strong></a>
+    <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-mdb-toggle="collapse" data-mdb-target="#navbarContent"
         aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon text-light"></span>
+        <i class="fas fa-bars text-white"></i>
       </button>
       <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
         <ul class="navbar-nav mb-2 mb-lg-0">
@@ -53,202 +54,52 @@
       </div>
     </div>
   </nav>
-  <div class="main-content">
-    <div class="main-content-header d-flex flex-column align-items-center justify-content-center container">
-      <div class="rounded-thumbnail mb-3">
-        <img src="images/Steven_Fojas-4199.jpg">
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-tile text-center">Steven Fojas</h5>
-          <p class="card-text">I'm currently a Computer Science student at the University of Nevada, Las Vegas. I
-            really enjoy learning about every aspect of Computer Science, from Software Engineering, Cyber Security,
-            Machine Learning, etc.
-            I would love to dive deeper into any of these fields and contribute to creating innovative projects or
-            defending them.
-          </p>
-        </div>
-        <div class="card-footer">
-          <div class="card-icons d-flex justify-content-center gap-3">
-            <a class="d-inline" href="https://github.com/stevenfojas670"><i class="fab fa-github fa-2x"></i></a>
-            <a class="d-inline" href="https://www.linkedin.com/in/steven-fojas-8a1516241/"><i
-                class="fab fa-linkedin fa-2x"></i></a>
+  <div class="main-content container-wide">
+    <div class="header">
+      <div class="header-content d-flex justify-content-start align-items-center">
+        <div class="header-items d-flex flex-column">
+          <h1 class="name">Steven Fojas</h1>
+          <div class="d-flex gap-3 justify-content-end">
+            <a href="https://www.linkedin.com/in/steven-fojas-8a1516241/" target="_blank">
+              <button class="btn btn-outline-light btn-lg" type="button">Linkedin</button>
+            </a>
+            <a href="https://github.com/stevenfojas670" target="_blank">
+              <button class="btn btn-light btn-lg" type="button">github</button>
+            </a>
           </div>
         </div>
+        <button class="btn btn-outline-light"><i class="fas fa-angle-down"></i></button>
+    </div>
+    <div class="main-content-body">
+      <div class="body-tabs" id="about">
+
+      </div>
+      <div class="body-tabs" id="experience">
+
+      </div>
+      <div class="body-tabs" id="skills">
+
+      </div>
+      <div class="body-tabs" id="contact">
+
       </div>
     </div>
-    <div class="main-content-body container">
-      <hr class="hr">
-      <div class="container body-tabs" id="about">
-        <div class="d-flex justify-content-center flex-row mb-3">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-tile text-center">About Me</h5>
-              <p class="card-text">
-                I'm originally from Saipan, but I moved to Las Vegas, Nevada when I was 11 years old. I've basically
-                grown up in this city. I went to middle school, high school, and college here.
-                I enjoy the outdoors, sports, video games, exercise, and computer science. I enjoy hiking, swimming,
-                running, biking, basketball, lifting, etc. I just like getting active, but I enjoy the beach the most.
-                For video games, I enjoy playing anything that involves playing with friends, but games with a good
-                story are great too.
-              </p>
-            </div>
-            <div class="card-footer">
-              <div class="card-icons d-flex justify-content-center gap-3">
-                <i class="fas fa-basketball"></i>
-                <i class="fas fa-mountain"></i>
-                <i class="fas fa-person-running"></i>
-                <i class="fas fa-person-biking"></i>
-                <i class="fas fa-person-swimming"></i>
-                <i class="fas fa-dumbbell"></i>
-                <i class="fas fa-gamepad"></i>
-                <i class="fas fa-code"></i>
-              </div>
-            </div>
-          </div>
+    <footer class="text-center text-lg-start">
+      <!-- Copyright -->
+      <div class="text-center p-5">
+        <div class="footer-icons justify-content-center d-flex gap-3 mb-3">
+          <a href="https://www.linkedin.com/in/steven-fojas-8a1516241/"><i class="fab fa-linkedin fa-2x"></i></a>
+          <a href="https://github.com/stevenfojas670"><i class="fab fa-github fa-2x"></i></a>
         </div>
+        <p>&copy; 2023 Steven Fojas. All rights reserved.</p>
       </div>
-      <hr class="hr">
-      <div class="container body-tabs" id="experience">
-        <div class="d-flex flex-row flex-wrap justify-content-between align-items-center mb-3">
-          <h1 class="display-6 mb-3">Experience</h1>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Nevada National Security Sites</h5>
-              <p class="card-text">
-                <strong>Full Stack Developer Intern</strong><br>
-                Developed a new internal application using .NET 7, C#, Javascript, jQuery, HTML5, CSS3, Azure Devops, Scrum, Hybrid Agile
-              </p>
-              <h5 class="card-title">Kirkorian School of Medicine</h5>
-              <p class="card-text"><strong>IT Technician</strong><br>
-                Trouble shooting IT issues...
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr class="hr">
-      <div class="container body-tabs" id="skills">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-          <h1 class="display-6">Skills</h1>
-          <div class="skill-container w-50">
-            <div class="skill">
-              <div class="d-flex justify-content-between">
-                <span class="skill-title">C#</span>
-                <span class="skill-label">Intermediate</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-percentage w-75"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="d-flex justify-content-between">
-                <span class="skill-title">JavaScript</span>
-                <span class="skill-label">Intermediate</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-percentage w-75"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="d-flex justify-content-between">
-                <span class="skill-title">HTML5 + CSS3</span>
-                <span class="skill-label">Intermediate</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-percentage w-75"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="d-flex justify-content-between">
-                <span class="skill-title">jQuery</span>
-                <span class="skill-label">Intermediate</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-percentage w-75"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="d-flex justify-content-between">
-                <span class="skill-title">Node.js</span>
-                <span class="skill-label">Intermediate</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-percentage w-75"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="d-flex justify-content-between">
-                <span class="skill-title">C++</span>
-                <span class="skill-label">Decent</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-percentage w-50"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="d-flex justify-content-between">
-                <span class="skill-title">.NET 7</span>
-                <span class="skill-label">Decent</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-percentage w-50"></div>
-              </div>
-            </div>
-            <div class="skill">
-              <div class="d-flex justify-content-between">
-                <span class="skill-title">Express.js</span>
-                <span class="skill-label">Decent</span>
-              </div>
-              <div class="skill-bar">
-                <div class="skill-percentage w-50"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <hr class="hr">
-      <div class="container body-tabs" id="contact">
-        <div class="d-flex justify-content-center flex-row mb-3">
-          <div class="card flex-fill">
-            <div class="card-body">
-              <h5 class="card-tile mb-3">Contact Me</h5>
-              <hr class="hr">
-              <div class="mb-3">
-                <label class="form-label" for="email">Email</label>
-                <input class="form-control" id="email" type="email">
-              </div>
-              <div class="mb-3">
-                <label class="form-label" for="subject">Subject</label>
-                <input class="form-control" id="subject" type="text">
-              </div>
-              <div class="mb-3">
-                <label class="form-label" for="message">Message</label>
-                <textarea class="form-control" id="message" rows="4"></textarea>
-              </div>
-              <div class="d-flex">
-                <button class="btn btn-primary flex-fill" type="button" id="submit">Send</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <footer class="main-content-footer bg-light text-muted">
-      <!-- Section: Social media -->
-      <section class="d-flex justify-content-center p-4 border-bottom gap-3 footer-links">
-        <a class="d-inline" href="https://github.com/stevenfojas670"><i class="fab fa-github fa-lg"></i></a>
-        <a class="d-inline" href="https://www.linkedin.com/in/steven-fojas-8a1516241/"><i
-            class="fab fa-linkedin fa-lg"></i></a>
-        <span>stevenfojas670@gmail.com</span>
-      </section>
-      <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        <p>&copy; 2023 Copyright. <strong>Steven Fojas</strong>. All rights reserved.</p>
-      </div>
+      <!-- Copyright -->
     </footer>
-    <div class="createdAlerts text-center" role="alert" style="display:none"></div>
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
-    <script type="text/javascript" src="/js/site.js"></script>
+  </div>
+  <div class="createdAlerts text-center" role="alert" style="display:none"></div>
+  <script type="text/javascript" src="/js/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
+  <script type="text/javascript" src="/js/site.js"></script>
 </body>
+
 </html>

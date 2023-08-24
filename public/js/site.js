@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function SetEventListeners(){
+
     $(document).on('show.bs.collapse', '#navbarContent', function(){
         $('.nav-icons').addClass('gap-3');
     });
