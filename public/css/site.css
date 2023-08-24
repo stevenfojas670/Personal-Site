@@ -50,6 +50,9 @@
 }
 
 .header-content{
+    display: flex;
+    justify-content: start;
+    align-items: center;
     position: relative;
     z-index: 1;
     height: 100%;
@@ -58,17 +61,22 @@
 
 .header-items{
     margin-left: 3em;
+    gap: 1.5em;
 }
 
 .header-items .name {
     color: white;
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 100px;
+}
+
+.header-items .header-links{
+    justify-content: end;
+    gap: 1em;
 }
 
 .rounded-thumbnail{
-    width: 25vh;
-    height: 25vh;
+    width: 40vh;
+    height: 40vh;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0px 8px 15px 1px rgba(0, 0, 0, 0.5);
@@ -86,10 +94,57 @@
         max-width: 18em;
         max-height: 18em;
     }
+
+    .header-content{
+        justify-content: center;
+    }
+
+    .header-items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }
 }
 
-.card-icons a:hover{
-    color: #cd9b1d;
+#linkedinLink:hover{
+    background-color: white;
+    color: rgb(95, 95, 95);
+}
+
+#githubLink{
+    background-color: white;
+    color: rgb(95, 95, 95)
+}
+
+#githubLink:hover{
+    background-color: transparent;
+    color: white;
+}
+
+.next-button{
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    z-index: 9999;
+    transform: translateX(-50%);
+}
+
+.next-button a{
+    color: white;
+    transition: color 0.3s, color 0.3s; /* Adding transitions for smooth animation */
+}
+
+.next-button a:hover{
+    color: rgba(95, 95, 95, 0.8);
+}
+
+.about-text h1{
+    color: rgb(255, 255, 255);
+}
+
+.about-text p{
+    color: rgb(255, 255, 255);
 }
 
 .createdAlerts{
