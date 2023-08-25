@@ -1,0 +1,35 @@
+/* Sizing Standard */
+$base-font-size: 16px;   /* Base font size for the document */
+
+/* Typography */
+$font-family: 'Montserrat', 'sans-serif';
+$heading-font-weight: bold;
+$paragraph-font-weight: 100;
+
+$heading-1: 6.5rem;      /* 40px */
+$heading-2: 2rem;        /* 32px */
+$heading-3: 1.75rem;     /* 28px */
+$heading-4: 1.5rem;      /* 24px */
+$heading-5: 1.25rem;     /* 20px */
+
+$paragraph: 1rem;        /* 16px */
+$small-text: 0.875rem;   /* 14px */
+
+/* Colors */
+$primary: white;
+$secondary: rgb(95, 95, 95);
+$accent: #cd9b1d;
+
+
+/* Spacing */
+$base-spacing-unit: 8px;
+$spacing-unit: 1rem;     /* 16px */
+$spacing-unit-half: 0.5rem; /* 8px */
+
+$line-height: 1.5;       /* Line height for body text */
+
+/* Responsive Breakpoints */
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 992px;
+$extra-large-screen: 1200px;

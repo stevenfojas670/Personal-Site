@@ -1,216 +1,291 @@
-.navbar{
-    backdrop-filter: blur(10px);
-    background-color: rgba(228, 228, 228, 0);
+/* Sizing Standard */
+/* Base font size for the document */
+/* Typography */
+/* 40px */
+/* 32px */
+/* 28px */
+/* 24px */
+/* 20px */
+/* 16px */
+/* 14px */
+/* Colors */
+/* Spacing */
+/* 16px */
+/* 8px */
+/* Line height for body text */
+/* Responsive Breakpoints */
+body {
+  font-size: 16px;
+  background-color: black;
+  font-family: "Montserrat", "sans-serif";
+  line-height: 1.5;
+}
+body h1 {
+  font-weight: bold;
+  font-size: 6.5rem;
+  color: white;
+}
+body h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  color: #cd9b1d;
+}
+body h3 {
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: #cd9b1d;
+}
+body h4 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+}
+body h5 {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #cd9b1d;
+}
+body p {
+  font-size: 1rem;
+  font-weight: 100;
+  color: white;
+}
+@media (max-width: 768px) {
+  body h1 {
+    font-size: 4em;
+  }
+}
+body .card {
+  background-color: rgb(29, 29, 29);
 }
 
-.navbar .navbar-brand{
-    color: white;
+.navbar {
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding-left: 10em;
+  padding-right: 20px;
+  animation: slide-down 0.9s ease-out forwards;
 }
 
-.navbar-nav .nav-link{
-    color: rgb(255, 255, 255);
+.navbar .navbar-brand {
+  color: white;
 }
 
-.navbar-nav .nav-link:hover{
-    color: #cd9b1d;
+.navbar-nav .nav-link {
+  color: rgb(255, 255, 255);
+  animation: slide-down 1s ease-out forwards;
 }
 
-.navbar .navbar-brand:hover{
-    color: #cd9b1d;
+.navbar-nav .nav-link:hover {
+  color: #cd9b1d;
 }
 
-.main-content-body{
-    background-color: black;
+.navbar .navbar-brand:hover {
+  color: #cd9b1d;
 }
 
-.body-tabs{
-    height: 100vh;
-    width: 100%;
+#resumeDownload {
+  border: 1px solid #cd9b1d;
+  color: white;
+  background-color: transparent;
 }
 
-.header{
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    background-image: url('/images/vincent-camacho-naECyRIi9pc-unsplash.jpg');
-    object-fit: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+#resumeDownload:hover {
+  background-color: #cd9b1d;
 }
 
-.header::before{
-    content: ''; /* Required for a pseudo-element */
-    position: absolute; /* Position the pseudo-element absolutely */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+.main-content-body {
+  background-color: black;
 }
 
-.header-content{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    width: 100%;
+.body-tabs {
+  height: 100vh;
+  width: 100%;
 }
 
-.header-items{
-    margin-left: 3em;
-    gap: 1.5em;
+.header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("/images/vincent-camacho-naECyRIi9pc-unsplash.jpg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.header::before {
+  content: ""; /* Required for a pseudo-element */
+  position: absolute; /* Position the pseudo-element absolutely */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+}
+
+.header-content {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.header-items {
+  margin-left: 3em;
+  gap: 1.5em;
 }
 
 .header-items .name {
-    color: white;
-    font-family: 'Bebas Neue', sans-serif;
+  color: white;
+  animation: slide-right 0.7s ease-out forwards;
 }
 
-.header-items .header-links{
-    justify-content: end;
-    gap: 1em;
-}
-
-.rounded-thumbnail{
-    width: 40vh;
-    height: 40vh;
-    border-radius: 50%;
-    overflow: hidden;
-    box-shadow: 0px 8px 15px 1px rgba(0, 0, 0, 0.5);
-}
-
-.rounded-thumbnail img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center top;
-}
-
-@media (max-width: 768px){
-    .rounded-thumbnail{
-        max-width: 18em;
-        max-height: 18em;
-    }
-
-    .header-content{
-        justify-content: center;
-    }
-
-    .header-items{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-left: 0;
-    }
-}
-
-#linkedinLink:hover{
-    background-color: white;
-    color: rgb(95, 95, 95);
-}
-
-#githubLink{
-    background-color: white;
-    color: rgb(95, 95, 95)
-}
-
-#githubLink:hover{
-    background-color: transparent;
-    color: white;
-}
-
-.next-button{
-    position: absolute;
-    bottom: 1em;
-    left: 50%;
-    z-index: 9999;
-    transform: translateX(-50%);
-}
-
-.next-button a{
-    color: white;
-    transition: color 0.3s, color 0.3s; /* Adding transitions for smooth animation */
-}
-
-.next-button a:hover{
-    color: rgba(95, 95, 95, 0.8);
-}
-
-.about-text h1{
-    color: rgb(255, 255, 255);
-}
-
-.about-text p{
-    color: rgb(255, 255, 255);
-}
-
-.createdAlerts{
-    position: fixed; /* Use 'fixed' for an overlay that stays in the same position while scrolling */;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    z-index: 1000 !important; /* Set a high z-index value to ensure the overlay appears above other elements */
-}
-
-.skill-container{
-    background-color: rgb(245, 245, 245);
-    border-radius: 0.5em;
-    padding: 1em;
-}
-
-.skill-container .skill-title{
-    display: block;
-}
-
-.skill-container .skill-label{
-    font-weight: 500;
-    color: rgb(93, 93, 93);
-}
-
-
-.skill-container .skill-bar{
-    height: 0.8em;
-    width: 100%;
-    border-radius: 5px;
-    margin-top: 0.3em;
-    margin-bottom: 0.5em;
-    background-color: rgb(236, 236, 236);
-}
-
-.skill-bar .skill-percentage{
-    position: relative;
-    display: block;
-    height: 100%;
-    background: rgb(101, 149, 225);
-    border-radius: 5px;
-    animation: progress 0.8s ease-in-out forwards;
+@keyframes slide-up {
+  0% {
     opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slide-left {
+  0% {
+    opacity: 0;
+    transform: translateX(10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes slide-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.header-items .header-links {
+  justify-content: end;
+  gap: 1em;
+  animation: slide-up 0.9s ease-out forwards;
 }
 
-@keyframes progress{
-    0%{
-        width: 0;
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+.rounded-thumbnail {
+  width: 40vh;
+  height: 40vh;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0px 8px 15px 1px rgba(0, 0, 0, 0.5);
 }
 
-footer{
-    background-color: black;
+.rounded-thumbnail img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center top;
+     object-position: center top;
 }
 
-.footer-icons a{
-    color: rgb(146, 146, 146);
+@media (max-width: 768px) {
+  .rounded-thumbnail {
+    max-width: 15em;
+    max-height: 15em;
+  }
+  .header-content {
+    justify-content: center;
+  }
+  .header-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+  }
+  .image-column {
+    margin-bottom: 4em;
+  }
+}
+#linkedinLink:hover {
+  background-color: white;
+  color: rgb(95, 95, 95);
 }
 
-.footer-icons a:hover{
-    color: white;
+#githubLink {
+  background-color: white;
+  color: rgb(95, 95, 95);
 }
+
+#githubLink:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.next-button {
+  display: flex;
+  position: absolute;
+  bottom: 1em;
+  z-index: 9999;
+  width: 100%;
+  justify-content: center;
+  animation: slide-up 0.7s ease-out forwards;
+}
+
+.next-button a {
+  color: white;
+  transition: color 0.3s, color 0.3s; /* Adding transitions for smooth animation */
+}
+
+.next-button a:hover {
+  color: rgba(95, 95, 95, 0.8);
+}
+
+.about-text h1 {
+  color: rgb(255, 255, 255);
+}
+
+.about-text p {
+  color: rgb(255, 255, 255);
+}
+
+.job-container {
+  border-bottom: 1px rgb(95, 95, 95) solid;
+  margin-bottom: 3em;
+}
+.job-container .badge {
+  background-color: rgb(29, 29, 29);
+  color: white;
+  font-weight: 300;
+}
+
+footer {
+  background-color: black;
+}
+
+.footer-icons a {
+  color: rgb(146, 146, 146);
+}
+
+.footer-icons a:hover {
+  color: white;
+}/*# sourceMappingURL=site.css.map */

@@ -13,7 +13,10 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
   <!-- MDB -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Font1|Font2&display=swap">
+  <!-- Inside the <head> section of your HTML -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,200&display=swap" rel="stylesheet">
+
+
 
 </head>
 
@@ -24,7 +27,7 @@
         aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars text-white"></i>
       </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarContent">
+      <div class="collapse navbar-collapse justify-content-between" id="navbarContent">
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" href="#top">Home</a>
@@ -36,12 +39,15 @@
             <a class="nav-link" href="#experience">Experience</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="#skills">Skills</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#contact">Contact</a>
           </li>
-          <div class="d-flex nav-icons">
+          <div class="d-flex nav-icons gap-0">
             <li class="nav-item d-inline">
               <a class="nav-link" href="https://github.com/stevenfojas670"><i class="fab fa-github fa-lg"></i></a>
             </li>
@@ -51,15 +57,18 @@
             </li>
           </div>
         </ul>
+        <a class="navbar-brand" href="#">
+          <button class="btn" id="resumeDownload" type="button">Resume</button>
+        </a>
       </div>
     </div>
   </nav>
   <div class="main-content container-wide">
     <div class="header">
-      <div class="header-content d-flex">
+      <div class="header-content">
         <div class="header-items d-flex flex-column">
-          <div class="d-flex flex-wrap">
-            <h1 class="display-1 name">Steven Fojas</h1>
+          <div class="d-flex flex-column flex-wrap">
+            <h1 class="name">Steven Fojas</h1>
           </div>
           <div class="d-flex header-links">
             <a href="https://www.linkedin.com/in/steven-fojas-8a1516241/" target="_blank">
@@ -75,21 +84,108 @@
     <div class="main-content-body">
       <div class="body-tabs container d-flex justify-content-center align-items-center" id="about">
         <div class="row">
-          <div class="col">
+          <div class="col-md-6 d-flex justify-content-center image-column">
             <div class="rounded-thumbnail">
               <img src="/images/Steven_Fojas-4199.jpg">
             </div>
           </div>
-          <div class="col">
+          <div class="col-md-6">
             <div class="about-text h-100 d-flex flex-column justify-content-center">
-              <h1 class="display-6">About Me</h1>
+              <h1>About Me</h1>
+              <h2>Full Stack Developer</h2>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque quos nesciunt distinctio mollitia aliquam optio quam asperiores in sed, eum eveniet iure veritatis. Magnam, nam repudiandae aspernatur tempore cum beatae.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="body-tabs" id="experience">
-        
+      <div class="body-tabs container d-flex flex-column justify-content-center flex-wrap align-items-center" id="experience">
+        <div class="job-container d-flex flex-column w-75">
+          <div class="job-header d-flex flex-row justify-content-between">
+            <div class="job-title">
+              <h4>IT Associate</h4>
+            </div>
+            <div class="job-timeline">
+              <p>July 2022 - Current</p>
+            </div>
+          </div>
+          <div class="job-subheader d-flex flex-row justify-content-between">
+            <div class="job-name">
+              <h5>Kerkorian School of Medicine</h5>
+            </div>
+            <div class="job-location">
+              <p>Las Vegas, Nevada</p>
+            </div>
+          </div>
+          <div class="job-body d-flex justify-content-start">
+            <div class="job-description">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, natus iure. A, labore molestias dolorum deleniti dignissimos assumenda autem iste reprehenderit expedita quasi pariatur quisquam, similique blanditiis doloribus commodi beatae?</p>
+            </div>
+          </div>
+          <div class="job-footer d-flex justify-content-start gap-3 mb-3">
+            <div class="job-skills">
+              <span class="badge rounded-pill">Crestron</span>
+              <span class="badge rounded-pill">BiAmp</span>
+              <span class="badge rounded-pill">Network Troubleshooting</span>
+              <span class="badge rounded-pill">Hardware Troubleshooting</span>
+            </div>
+          </div>
+        </div>
+        <div class="job-container d-flex flex-column w-75">
+          <div class="job-header d-flex flex-row justify-content-between">
+            <div class="job-title">
+              <h4>Full Stack Developer Intern</h4>
+            </div>
+            <div class="job-timeline">
+              <p>May 2023 - August 2023</p>
+            </div>
+          </div>
+          <div class="job-subheader d-flex flex-row justify-content-between">
+            <div class="job-name">
+              <h5>Nevada National Security Site</h5>
+            </div>
+            <div class="job-location">
+              <p>Las Vegas, Nevada</p>
+            </div>
+          </div>
+          <div class="job-body d-flex justify-content-start">
+            <div class="job-description">
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime, natus iure. A, labore molestias dolorum deleniti dignissimos assumenda autem iste reprehenderit expedita quasi pariatur quisquam, similique blanditiis doloribus commodi beatae?</p>
+            </div>
+          </div>
+          <div class="job-footer d-flex justify-content-start gap-3 mb-3">
+            <div class="job-skills">
+              <span class="badge rounded-pill">C#</span>
+              <span class="badge rounded-pill">JavaScript</span>
+              <span class="badge rounded-pill">HTML5</span>
+              <span class="badge rounded-pill">CSS3</span>
+              <span class="badge rounded-pill">jQuery</span>
+              <span class="badge rounded-pill">.NET 7</span>
+              <span class="badge rounded-pill">Entity Framework</span>
+              <span class="badge rounded-pill">Microsoft SQL Server</span>
+              <span class="badge rounded-pill">Azure DevOps</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body-tabs container d-flex gap-3 justify-content-center align-items-center" id="projects">
+        <div class="card project-card">
+          <div class="card-body">
+            <h4 class="card-title">Signage Tracking System</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati nam ad est hic earum ullam provident veritatis sed similique deleniti deserunt, totam voluptate, at doloribus ea a cum temporibus. Odit.</p>
+          </div>
+        </div>
+        <div class="card project-card">
+          <div class="card-body">
+            <h4 class="card-title">Discord Bot</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati nam ad est hic earum ullam provident veritatis sed similique deleniti deserunt, totam voluptate, at doloribus ea a cum temporibus. Odit.</p>
+          </div>
+        </div>
+        <div class="card project-card">
+          <div class="card-body">
+            <h4 class="card-title">Personal Website</h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati nam ad est hic earum ullam provident veritatis sed similique deleniti deserunt, totam voluptate, at doloribus ea a cum temporibus. Odit.</p>
+          </div>
+        </div>
       </div>
       <div class="body-tabs" id="skills">
 
@@ -110,7 +206,6 @@
       <!-- Copyright -->
     </footer>
   </div>
-  <div class="createdAlerts text-center" role="alert" style="display:none"></div>
   <script type="text/javascript" src="/js/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script>
   <script type="text/javascript" src="/js/site.js"></script>

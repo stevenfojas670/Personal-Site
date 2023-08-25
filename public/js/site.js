@@ -1,5 +1,26 @@
 document.addEventListener('DOMContentLoaded', function(){
     SetEventListeners();
+
+    //Elements to check for if they are in view
+    var aboutHeader = $('.about-text').children(':first-child');
+    var aboutSubHeader = $('.about-text').children(':nth-child(2)');
+    var aboutText = $('.about-text').children(':nth-child(3)');
+
+    var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+            if(entry.isIntersecting){
+                console.log('about-text is in view');
+                aboutHeader.css('animation', 'slide-left 0.7s ease-out forwards');
+                aboutSubHeader.css('animation', 'slide-right 0.7s ease-out forwards');
+                aboutText.css('animation', 'slide-up 0.9s ease-out forwards');
+                observer.unobserve(entry.target);
+            }
+        })
+    });
+
+    observer.observe(aboutHeader[0]);
+    observer.observe(aboutSubHeader[0]);
+    observer.observe(aboutText[0]);
 });
 
 function SetEventListeners(){
@@ -31,25 +52,5 @@ function SetEventListeners(){
                 errorMessage();
             }
         });
-    });
-}
-
-function successMessage(message){
-    $('.createdAlerts').addClass('alert alert-success').html('Email Sent <i class="fas fa-circle-check"></i>').fadeIn('slow', function(){
-        setTimeout(function(){
-            $('.createdAlerts').fadeOut('slow', function(){
-                $(this).removeClass('alert alert-success').html('');
-            });
-        }, 2000);
-    });
-}
-
-function errorMessage(message){
-    $('.createdAlerts').addClass('alert alert-danger').html('Failed to send email <i class="fas fa-circle-exclamation"></i>').fadeIn('slow', function(){
-        setTimeout(function(){
-            $('.createdAlerts').fadeOut('slow', function() {
-                $(this).removeClass('alert alert-success').html('');
-            });
-        }, 2000);
     });
 }

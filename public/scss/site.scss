@@ -1,0 +1,286 @@
+@import '_variables';
+
+body{
+    font-size: $base-font-size;
+    background-color: black;
+    font-family: $font-family;
+    line-height: $line-height;
+    h1{
+        font-weight: $heading-font-weight;
+        font-size: $heading-1;
+        color: $primary;
+    }
+    h2{
+        font-weight: $heading-font-weight;
+        font-size: $heading-2;
+        color: $accent;
+    }
+    h3{
+        font-weight: $heading-font-weight;
+        font-size: $heading-3;
+        color: $accent;
+    }
+    h4{
+        font-weight: $heading-font-weight;
+        font-size: $heading-4;
+        color: $primary;
+    }
+    h5{
+        font-weight: $heading-font-weight;
+        font-size: $heading-5;
+        color: $accent;
+    }
+    p{
+        font-size: $paragraph;
+        font-weight: $paragraph-font-weight;
+        color: $primary;
+    }
+    @media(max-width: $medium-screen){
+        h1{
+            font-size: 4em;
+        }
+    }
+    .card{
+        background-color:rgb(29, 29, 29);
+    }
+}
+
+.navbar{
+    backdrop-filter: blur(5px);
+    padding-left: 10em;
+    padding-right: 20px;
+    animation: slide-down 0.9s ease-out forwards;
+}
+
+.navbar .navbar-brand{
+    color: white;
+}
+
+.navbar-nav .nav-link{
+    color: rgb(255, 255, 255);
+    animation: slide-down 1s ease-out forwards;
+}
+
+.navbar-nav .nav-link:hover{
+    color: #cd9b1d;
+}
+
+.navbar .navbar-brand:hover{
+    color: #cd9b1d;
+}
+
+#resumeDownload{
+    border: 1px solid #cd9b1d;
+    color: white;
+    background-color: transparent;
+}
+
+#resumeDownload:hover{
+    background-color: #cd9b1d
+}
+
+.main-content-body{
+    background-color: black;
+}
+
+.body-tabs{
+    height: 100vh;
+    width: 100%;
+}
+
+.header{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-image: url('/images/vincent-camacho-naECyRIi9pc-unsplash.jpg');
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.header::before{
+    content: ''; /* Required for a pseudo-element */
+    position: absolute; /* Position the pseudo-element absolutely */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+}
+
+.header-content{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.header-items{
+    margin-left: 3em;
+    gap: 1.5em;
+}
+
+.header-items .name {
+    color: white;
+    animation: slide-right 0.7s ease-out forwards;
+}
+
+@keyframes slide-up{
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down{
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-left{
+    0%{
+        opacity: 0;
+        transform: translateX(10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-right{
+    0%{
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.header-items .header-links{
+    justify-content: end;
+    gap: 1em;
+    animation: slide-up 0.9s ease-out forwards;
+}
+
+.rounded-thumbnail{
+    width: 40vh;
+    height: 40vh;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0px 8px 15px 1px rgba(0, 0, 0, 0.5);
+}
+
+.rounded-thumbnail img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+@media (max-width: $medium-screen){
+    
+    .rounded-thumbnail{
+        max-width: 15em;
+        max-height: 15em;
+    }
+
+    .header-content{
+        justify-content: center;
+    }
+
+    .header-items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }
+
+    .image-column{
+        margin-bottom: 4em;
+    }
+}
+
+#linkedinLink:hover{
+    background-color: white;
+    color: rgb(95, 95, 95);
+}
+
+#githubLink{
+    background-color: white;
+    color: rgb(95, 95, 95)
+}
+
+#githubLink:hover{
+    background-color: transparent;
+    color: white;
+}
+
+.next-button{
+    display: flex;
+    position: absolute;
+    bottom: 1em;
+    z-index: 9999;
+    width: 100%;
+    justify-content: center;
+    animation: slide-up 0.7s ease-out forwards;
+}
+
+.next-button a{
+    color: white;
+    transition: color 0.3s, color 0.3s; /* Adding transitions for smooth animation */
+}
+
+.next-button a:hover{
+    color: rgba(95, 95, 95, 0.8);
+}
+
+.about-text h1{
+    color: rgb(255, 255, 255);
+}
+
+.about-text p{
+    color: rgb(255, 255, 255);
+}
+
+.job-container{
+    border-bottom: 1px $secondary solid;
+    margin-bottom: 3em;
+
+    .badge{
+        background-color: rgb(29, 29, 29);
+        color: $primary;
+        font-weight: 300;
+    }
+}
+
+#projects{
+}
+
+footer{
+    background-color: black;
+}
+
+.footer-icons a{
+    color: rgb(146, 146, 146);
+}
+
+.footer-icons a:hover{
+    color: white;
+}
