@@ -52,14 +52,11 @@ body p {
 }
 @media (max-width: 768px) {
   body h1 {
-    font-size: 3.5em;
-  }
-  body h2 {
-    font-size: 2em;
+    font-size: 4em;
   }
 }
 body .card {
-  background-color: transparent;
+  background-color: rgb(29, 29, 29);
 }
 
 .navbar {
@@ -274,16 +271,6 @@ body .card {
 .job-container {
   border-bottom: 1px rgb(95, 95, 95) solid;
   margin-bottom: 3em;
-  width: 100%;
-}
-.job-container .job-header, .job-container .job-subheader {
-  display: flex;
-  justify-content: space-between;
-}
-@media (max-width: 768px) {
-  .job-container .job-header, .job-container .job-subheader {
-    display: block;
-  }
 }
 .job-container .badge {
   background-color: rgb(29, 29, 29);
@@ -291,16 +278,11 @@ body .card {
   font-weight: 300;
 }
 
-#projects .badge {
-  background-color: rgb(29, 29, 29);
-  color: white;
-  font-weight: 300;
+.project-card {
+  max-width: 33%;
 }
-
-.divider {
-  align-self: flex-start;
-  margin-top: 10%;
-  margin-bottom: 2em;
+.project-card .card-body h4 {
+  font-size: 2em;
 }
 
 footer {

@@ -37,11 +37,14 @@ body{
     }
     @media(max-width: $medium-screen){
         h1{
-            font-size: 4em;
+            font-size: 3.5em;
+        }
+        h2{
+            font-size: 2.0em;
         }
     }
     .card{
-        background-color:rgb(29, 29, 29);
+        background-color: transparent;
     }
 }
 
@@ -262,6 +265,18 @@ body{
 .job-container{
     border-bottom: 1px $secondary solid;
     margin-bottom: 3em;
+    width: 100%;
+
+    .job-header, .job-subheader{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    @media(max-width: $medium-screen){
+        .job-header, .job-subheader{
+            display: block;
+        }
+    }
 
     .badge{
         background-color: rgb(29, 29, 29);
@@ -271,6 +286,17 @@ body{
 }
 
 #projects{
+    .badge{
+        background-color: rgb(29, 29, 29);
+        color: $primary;
+        font-weight: 300;
+    }
+}
+
+.divider{
+    align-self: flex-start;
+    margin-top: 10%;
+    margin-bottom: 2em;
 }
 
 footer{
