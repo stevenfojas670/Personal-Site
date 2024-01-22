@@ -1,6 +1,10 @@
-# Projects
-Multiple projects will be placed in here
-This will be comprised of my personal website, animal shelter web app, and many more
+# Personal Site
+Under construction, working on creating the experience, projects, skills, contact
+
+Functions
+- Will allow downloading resume
+- Links to github and linkedin
+- Contact me form to allow emails
 
 Dependencies:
 express.js
