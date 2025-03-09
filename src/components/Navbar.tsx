@@ -8,7 +8,7 @@ export default function Navbar() {
 	}
 
 	return (
-		<nav className="bg-gray-100">
+		<nav className="bg-neutral-700 ">
 			<div className="px-6 mx-auto">
 				<div className="flex justify-between md:justify-center">
 					{/* Mobile Button */}
@@ -32,14 +32,17 @@ export default function Navbar() {
 					</div>
 					<div className="flex space-x-4">
 						<div>
-							<a href="#" className="flex items-center py-4 px-2 text-gray-700">
+							<a
+								href="#"
+								className="flex items-center py-4 px-2 text-slate-700"
+							>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
 									viewBox="0 0 24 24"
 									strokeWidth={1.5}
 									stroke="currentColor"
-									className="size-6 hover:text-gray-900"
+									className="size-6 hover:text-slate-900"
 								>
 									<path
 										strokeLinecap="round"
@@ -53,31 +56,31 @@ export default function Navbar() {
 						<div className="hidden md:flex items-center space-x-1">
 							<a
 								href="#About"
-								className="py-4 px-3 text-gray-700 hover:text-gray-900"
+								className="py-4 px-3 text-slate-700 hover:text-slate-900"
 							>
 								About
 							</a>
 							<a
 								href="#Projects"
-								className="py-4 px-3 text-gray-700 hover:text-gray-900"
+								className="py-4 px-3 text-slate-700 hover:text-slate-900"
 							>
 								Projects
 							</a>
 							<a
 								href="#Experience"
-								className="py-4 px-3 text-gray-700 hover:text-gray-900"
+								className="py-4 px-3 text-slate-700 hover:text-slate-900"
 							>
 								Experience
 							</a>
 							<a
 								href="#Certifications"
-								className="py-4 px-3 text-gray-700 hover:text-gray-900"
+								className="py-4 px-3 text-slate-700 hover:text-slate-900"
 							>
 								Certifications
 							</a>
 							<a
 								href="#Contact"
-								className="py-4 px-3 text-gray-700 hover:text-gray-900"
+								className="py-4 px-3 text-slate-700 hover:text-slate-900"
 							>
 								Contact
 							</a>
@@ -89,31 +92,31 @@ export default function Navbar() {
 			<div className={`${mobileMenuShown ? "block" : "hidden"}`}>
 				<a
 					href="#About"
-					className="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+					className="block py-2 px-4 text-slate-700 hover:bg-slate-200"
 				>
 					About
 				</a>
 				<a
 					href="#Projects"
-					className="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+					className="block py-2 px-4 text-slate-700 hover:bg-slate-200"
 				>
 					Projects
 				</a>
 				<a
 					href="#Experience"
-					className="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+					className="block py-2 px-4 text-slate-700 hover:bg-slate-200"
 				>
 					Experience
 				</a>
 				<a
 					href="#Certifications"
-					className="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+					className="block py-2 px-4 text-slate-700 hover:bg-slate-200"
 				>
 					Certifications
 				</a>
 				<a
 					href="#Contact"
-					className="block py-2 px-4 text-gray-700 hover:bg-gray-200"
+					className="block py-2 px-4 text-slate-700 hover:bg-slate-200"
 				>
 					Contact
 				</a>
