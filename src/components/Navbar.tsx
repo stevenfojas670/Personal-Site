@@ -11,31 +11,9 @@ export default function Navbar() {
 		<nav className="bg-neutral-700 ">
 			<div className="px-6 mx-auto">
 				<div className="flex justify-between md:justify-center">
-					{/* Mobile Button */}
-					<div className="md:hidden flex items-center">
-						<button onClick={handleMobileMenuClick}>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								strokeWidth={1.5}
-								stroke="currentColor"
-								className="size-6"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-								/>
-							</svg>
-						</button>
-					</div>
 					<div className="flex space-x-4">
 						<div>
-							<a
-								href="#"
-								className="flex items-center py-4 px-2 text-slate-700"
-							>
+							<a href="#" className="flex items-center py-4 px-2 text-white">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
@@ -86,37 +64,56 @@ export default function Navbar() {
 							</a>
 						</div>
 					</div>
+					{/* Mobile Button */}
+					<div className="md:hidden flex items-center">
+						<button onClick={handleMobileMenuClick}>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								fill="none"
+								viewBox="0 0 24 24"
+								strokeWidth={1.5}
+								stroke="currentColor"
+								className="size-6 text-white"
+							>
+								<path
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+								/>
+							</svg>
+						</button>
+					</div>
 				</div>
 			</div>
 			{/* Mobile Menu */}
 			<div className={`${mobileMenuShown ? "block" : "hidden"}`}>
 				<a
 					href="#About"
-					className="block py-2 px-4 text-slate-700 hover:bg-slate-200"
+					className="block py-2 px-4 text-white hover:bg-slate-200"
 				>
 					About
 				</a>
 				<a
 					href="#Projects"
-					className="block py-2 px-4 text-slate-700 hover:bg-slate-200"
+					className="block py-2 px-4 text-white hover:bg-slate-200"
 				>
 					Projects
 				</a>
 				<a
 					href="#Experience"
-					className="block py-2 px-4 text-slate-700 hover:bg-slate-200"
+					className="block py-2 px-4 text-white hover:bg-slate-200"
 				>
 					Experience
 				</a>
 				<a
 					href="#Certifications"
-					className="block py-2 px-4 text-slate-700 hover:bg-slate-200"
+					className="block py-2 px-4 text-white hover:bg-slate-200"
 				>
 					Certifications
 				</a>
 				<a
 					href="#Contact"
-					className="block py-2 px-4 text-slate-700 hover:bg-slate-200"
+					className="block py-2 px-4 text-white hover:bg-slate-200"
 				>
 					Contact
 				</a>
