@@ -2,120 +2,120 @@ import { Skills } from "./components/Skills"
 
 export default function About() {
 	const skills = {
-		certifications: {
-			netplus: {
+		certifications: [
+			{
 				name: "CompTIA Network+",
 				icon: "/icons/networkplus-logo.svg",
 			},
-			secplus: {
+			{
 				name: "CompTIA Security+",
 				icon: "/icons/securityplus-logo.svg",
 			},
-			ccp: {
+			{
 				name: "AWS CCP",
 				icon: "/icons/awsccp-logo.png",
 			},
-		},
-		languages: {
-			cpp: {
+		],
+		languages: [
+			{
 				name: "C++",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
 			},
-			c: {
+			{
 				name: "C",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
 			},
-			csharp: {
+			{
 				name: "C#",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
 			},
-			javascript: {
+			{
 				name: "JavaScript",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
 			},
-			node: {
+			{
 				name: "Node.js",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg",
 			},
-			html: {
+			{
 				name: "HTML5",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
 			},
-			css: {
+			{
 				name: "CSS3",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
 			},
-			python: {
+			{
 				name: "Python",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
 			},
-			java: {
+			{
 				name: "Java",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
 			},
-			postgresql: {
+			{
 				name: "PostgreSQL",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
 			},
-		},
-		frameworks: {
-			react: {
+		],
+		frameworks: [
+			{
 				name: "React.js",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
 			},
-			nextjs: {
+			{
 				name: "Next.js",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
 			},
-			django: {
+			{
 				name: "Django",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
 			},
-			dotnet: {
+			{
 				name: ".NET",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-plain-wordmark.svg",
 			},
-		},
-		libraries: {
-			tailwindcss: {
+		],
+		libraries: [
+			{
 				name: "Tailwind CSS",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original-wordmark.svg",
 			},
-			bootstrap5: {
+			{
 				name: "Bootstrap 5",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
 			},
-			materialui: {
+			{
 				name: "Material UI",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
 			},
-		},
-		tools: {
-			git: {
+		],
+		tools: [
+			{
 				name: "Git",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
 			},
-			docker: {
+			{
 				name: "Docker",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg",
 			},
-			aws: {
+			{
 				name: "AWS",
 				icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
 			},
-			tenable: {
+			{
 				name: "Tenable",
 				icon: "/icons/tenable-icon.svg",
 			},
-			appviewx: {
+			{
 				name: "AppViewX",
 				icon: "/icons/appviewx-logo.svg",
 			},
-			f5: {
+			{
 				name: "F5 BIG-IP",
 				icon: "/icons/f5-logo.svg",
 			},
-		},
+		],
 	}
 
 	return (
@@ -166,7 +166,9 @@ export default function About() {
 					environments.
 				</p>
 				{/**Skills section, will have badges of languages */}
-				<Skills skills={skills} />
+				{Object.entries(skills).map((category) => (
+					<Skills category={category} />
+				))}
 			</div>
 		</div>
 	)
