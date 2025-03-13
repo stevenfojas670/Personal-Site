@@ -1,4 +1,4 @@
-import { Card } from "./components/Card"
+import { Accordion } from "./components/Accordion"
 
 export default function Experience() {
 	const experiences = [
@@ -150,8 +150,8 @@ export default function Experience() {
 				<h1 className="font-bold justify-self-center text-2xl md:text-3xl mb-3">
 					Experience
 				</h1>
-				{experiences.map((items) => (
-					<Card props={items} />
+				{experiences.map((items, index) => (
+					<Accordion key={index} items={items} />
 				))}
 			</div>
 		</div>

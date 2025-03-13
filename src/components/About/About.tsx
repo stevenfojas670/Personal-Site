@@ -166,8 +166,8 @@ export default function About() {
 					environments.
 				</p>
 				{/**Skills section, will have badges of languages */}
-				{Object.entries(skills).map((category) => (
-					<Skills category={category} />
+				{Object.entries(skills).map((category, index) => (
+					<Skills key={index} category={category} />
 				))}
 			</div>
 		</div>

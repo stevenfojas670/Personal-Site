@@ -1,23 +1,23 @@
-import { useState } from "react"
 import { motion } from "framer-motion"
+import { useState } from "react"
 
-export function Dropdown({ props }: { props: any }) {
+export function AccordionContent({ items }: { items: any }) {
 	const [expandedTitle, setExpandedTitle] = useState<string | null>(null)
+	const isExpanded = expandedTitle === items.title
 
 	const toggleExpand = (title: string) => {
-		setExpandedTitle(expandedTitle === title ? null : title)
+		setExpandedTitle(isExpanded ? null : title)
 	}
+
 	return (
 		<div className="bg-neutral-500 py-4 px-4 rounded-md mb-3 drop-shadow-md">
-			<div
-				className={`flex ${expandedTitle === props.title ? "mb-3" : ""} gap-3`}
-			>
-				<div>{props.title}</div>
+			<div className="flex gap-3 justify-between">
+				<div>{items.title}</div>
 				<button
 					className="cursor-pointer"
-					onClick={() => toggleExpand(props.title)}
+					onClick={() => toggleExpand(items.title)}
 				>
-					{expandedTitle === props.title ? (
+					{isExpanded ? (
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
@@ -51,38 +51,30 @@ export function Dropdown({ props }: { props: any }) {
 				</button>
 			</div>
 			<motion.div
-				initial={{ height: 0, opacity: 0 }}
-				animate={
-					expandedTitle === props.title
-						? { height: "auto", opacity: 1 }
-						: { opacity: 0 }
-				}
-				transition={{ ease: "easeInOut", duration: 0.8 }}
+				initial={{ maxHeight: 0 }}
+				animate={isExpanded ? { maxHeight: 1000 } : { maxHeight: 0 }}
+				transition={{ ease: "easeIn", duration: 0.4 }}
 				className="overflow-hidden"
 			>
-				{expandedTitle === props.title && (
-					<>
-						{props.description.map((point: any, descIndex: any) => (
-							<div key={descIndex} className="flex props-start gap-2 mb-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth={1.5}
-									stroke="currentColor"
-									className="w-4 h-4 text-green-500 shrink-0 mt-1"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="m4.5 12.75 6 6 9-13.5"
-									/>
-								</svg>
-								<span>{point}</span>
-							</div>
-						))}
-					</>
-				)}
+				{items.description.map((point: any, descIndex: any) => (
+					<div key={descIndex} className="flex items-start gap-2 mt-2">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							strokeWidth={1.5}
+							stroke="currentColor"
+							className="w-4 h-4 text-green-500 shrink-0 mt-1"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								d="m4.5 12.75 6 6 9-13.5"
+							/>
+						</svg>
+						<span>{point}</span>
+					</div>
+				))}
 			</motion.div>
 		</div>
 	)

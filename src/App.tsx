@@ -9,14 +9,16 @@ import Footer from "./components/Footer"
 
 function App() {
 	return (
-		<div>
-			<NavBar />
-			<Hero />
-			<About />
-			<Experience />
-			<Projects />
-			<Contact />
-			<Footer />
+		<div className="bg-neutral-700">
+			<div className="justify-self-center max-w-full md:max-w-7xl">
+				<NavBar />
+				<Hero />
+				<About />
+				<Experience />
+				<Projects />
+				<Contact />
+				<Footer />
+			</div>
 		</div>
 	)
 }
