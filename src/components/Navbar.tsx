@@ -8,19 +8,19 @@ export default function Navbar() {
 	}
 
 	return (
-		<nav className="bg-neutral-700 ">
+		<nav className="">
 			<div className="px-6 mx-auto">
 				<div className="flex justify-between md:justify-center">
 					<div className="flex space-x-4">
 						<div>
-							<a href="#" className="flex items-center py-4 px-2 text-white">
+							<a href="#" className="flex items-center py-4 px-2">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									fill="none"
 									viewBox="0 0 24 24"
 									strokeWidth={1.5}
 									stroke="currentColor"
-									className="size-6 hover:text-slate-900"
+									className="size-6"
 								>
 									<path
 										strokeLinecap="round"
@@ -32,34 +32,19 @@ export default function Navbar() {
 						</div>
 						{/* Primary Nav */}
 						<div className="hidden md:flex items-center space-x-1">
-							<a
-								href="#About"
-								className="py-4 px-3 text-slate-700 hover:text-slate-900"
-							>
+							<a href="#About" className="py-4 px-3 ">
 								About
 							</a>
-							<a
-								href="#Projects"
-								className="py-4 px-3 text-slate-700 hover:text-slate-900"
-							>
+							<a href="#Projects" className="py-4 px-3 ">
 								Projects
 							</a>
-							<a
-								href="#Experience"
-								className="py-4 px-3 text-slate-700 hover:text-slate-900"
-							>
+							<a href="#Experience" className="py-4 px-3 ">
 								Experience
 							</a>
-							<a
-								href="#Certifications"
-								className="py-4 px-3 text-slate-700 hover:text-slate-900"
-							>
+							<a href="#Certifications" className="py-4 px-3 ">
 								Certifications
 							</a>
-							<a
-								href="#Contact"
-								className="py-4 px-3 text-slate-700 hover:text-slate-900"
-							>
+							<a href="#Contact" className="py-4 px-3 ">
 								Contact
 							</a>
 						</div>
@@ -73,7 +58,7 @@ export default function Navbar() {
 								viewBox="0 0 24 24"
 								strokeWidth={1.5}
 								stroke="currentColor"
-								className="size-6 text-white"
+								className="size-6"
 							>
 								<path
 									strokeLinecap="round"
@@ -87,34 +72,19 @@ export default function Navbar() {
 			</div>
 			{/* Mobile Menu */}
 			<div className={`${mobileMenuShown ? "block" : "hidden"}`}>
-				<a
-					href="#About"
-					className="block py-2 px-4 text-white hover:bg-slate-200"
-				>
+				<a href="#About" className="block py-2 px-4">
 					About
 				</a>
-				<a
-					href="#Projects"
-					className="block py-2 px-4 text-white hover:bg-slate-200"
-				>
+				<a href="#Projects" className="block py-2 px-4">
 					Projects
 				</a>
-				<a
-					href="#Experience"
-					className="block py-2 px-4 text-white hover:bg-slate-200"
-				>
+				<a href="#Experience" className="block py-2 px-4">
 					Experience
 				</a>
-				<a
-					href="#Certifications"
-					className="block py-2 px-4 text-white hover:bg-slate-200"
-				>
+				<a href="#Certifications" className="block py-2 px-4">
 					Certifications
 				</a>
-				<a
-					href="#Contact"
-					className="block py-2 px-4 text-white hover:bg-slate-200"
-				>
+				<a href="#Contact" className="block py-2 px-4">
 					Contact
 				</a>
 			</div>

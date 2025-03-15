@@ -2,7 +2,7 @@ import { AccordionContent } from "./AccordionContent"
 
 export function Accordion({ items }: { items: any }) {
 	return (
-		<div className="bg-neutral-600 px-4 py-4 mb-3 rounded-md">
+		<div className="bg-neutral-200 px-4 py-4 mb-3 rounded-md">
 			<div className="mb-3">
 				<div className="">{items.role}</div>
 				<div className="">{items.company}</div>
