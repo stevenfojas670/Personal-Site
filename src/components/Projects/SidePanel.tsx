@@ -1,7 +1,7 @@
 export function SidePanel() {
 	return (
 		<div>
-			<div>Hello World</div>
+			<div>Side Panel</div>
 		</div>
 	)
 }

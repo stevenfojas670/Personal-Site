@@ -1,7 +1,10 @@
 export default function Projects() {
 	return (
-		<div className="">
-			<div className="px-6 py-6 mx-auto space-y-3 flex-col justify-items-center">
+		<section
+			id="projects"
+			className="px-4 md:px-6 py-20 md:py-32 mx-auto space-y-3 flex-col justify-items-center container"
+		>
+			<div className="md:px-6">
 				<h1 className="font-bold text-2xl md:text-3xl mb-3">Project</h1>
 				<div>
 					<p className="text-md">
@@ -12,6 +15,6 @@ export default function Projects() {
 					</p>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }

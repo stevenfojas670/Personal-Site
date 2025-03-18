@@ -1,93 +1,138 @@
 import { useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import { FaLinkedin } from "react-icons/fa"
+
+interface RouteProps {
+	href: string
+	label: string
+}
+
+const routeList: RouteProps[] = [
+	{
+		href: "#about",
+		label: "About",
+	},
+	{
+		href: "#experience",
+		label: "Experience",
+	},
+	{
+		href: "#projects",
+		label: "Projects",
+	},
+	{
+		href: "#contact",
+		label: "Contact",
+	},
+]
 
 export default function Navbar() {
-	const [mobileMenuShown, setMobileMenuState] = useState<boolean>(false)
-
-	const handleMobileMenuClick = () => {
-		setMobileMenuState((prev) => !prev)
-	}
-
+	const [isOpen, setIsOpen] = useState<boolean>(false)
 	return (
-		<nav className="">
-			<div className="px-6 mx-auto">
-				<div className="flex justify-between md:justify-center">
-					<div className="flex space-x-4">
+		<header className="sticky top-0 border-b-1 border-neutral-600 z-40 w-full bg-neutral-950">
+			<div className="container justify-self-center">
+				{/* mobile */}
+				<div className="mx-auto">
+					<nav className="md:hidden flex gap-2 justify-between text-xl px-4">
 						<div>
-							<a href="#" className="flex items-center py-4 px-2">
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									strokeWidth={1.5}
-									stroke="currentColor"
-									className="size-6"
-								>
-									<path
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-									/>
-								</svg>
-							</a>
+							<button>
+								<a href="#" className="flex items-center py-4 px-2">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										strokeWidth={1.5}
+										stroke="currentColor"
+										className="size-6"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+										/>
+									</svg>
+								</a>
+							</button>
 						</div>
-						{/* Primary Nav */}
-						<div className="hidden md:flex items-center space-x-1">
-							<a href="#About" className="py-4 px-3 ">
-								About
-							</a>
-							<a href="#Projects" className="py-4 px-3 ">
-								Projects
-							</a>
-							<a href="#Experience" className="py-4 px-3 ">
-								Experience
-							</a>
-							<a href="#Certifications" className="py-4 px-3 ">
-								Certifications
-							</a>
-							<a href="#Contact" className="py-4 px-3 ">
-								Contact
-							</a>
+						<div>
+							<button onClick={() => setIsOpen(!isOpen)}>
+								<a className="flex items-center py-4 px-2">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										fill="none"
+										viewBox="0 0 24 24"
+										strokeWidth={1.5}
+										stroke="currentColor"
+										className="size-6"
+									>
+										<path
+											strokeLinecap="round"
+											strokeLinejoin="round"
+											d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+										/>
+									</svg>
+								</a>
+							</button>
 						</div>
-					</div>
-					{/* Mobile Button */}
-					<div className="md:hidden flex items-center">
-						<button onClick={handleMobileMenuClick}>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								fill="none"
-								viewBox="0 0 24 24"
-								strokeWidth={1.5}
-								stroke="currentColor"
-								className="size-6"
-							>
-								<path
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-								/>
-							</svg>
-						</button>
-					</div>
+					</nav>
 				</div>
+				{/* desktop */}
+				<nav className="hidden md:flex justify-center py-4 gap-2">
+					<div className="space-x-4">
+						{routeList.map((route, index) => (
+							<a rel="noreferrer noopener" key={index} href={route.href}>
+								<button className="hover:bg-neutral-800 rounded-md transition-all duration-100 hover:cursor-pointer px-4 py-2">
+									{route.label}
+								</button>
+							</a>
+						))}
+					</div>
+					<div id="social-links" className="space-x-4 flex items-center">
+						<a
+							rel="noreferrer noopener"
+							href="https://www.linkedin.com/in/steven-fojas-8a1516241/"
+							target="__blank"
+						>
+							<button className="hover:bg-neutral-800 rounded-md transition-all duration-100 hover:cursor-pointer px-4 py-2">
+								<FaLinkedin size={20} />
+							</button>
+						</a>
+					</div>
+				</nav>
+				{/* mobile menu */}
+				<AnimatePresence>
+					{isOpen && (
+						<motion.div
+							initial={{ maxHeight: 0 }}
+							animate={{ maxHeight: 500 }}
+							exit={{ maxHeight: 0 }}
+							transition={{ ease: "easeIn", duration: 0.4 }}
+							className="overflow-hidden"
+						>
+							<div className="flex flex-col justify-center px-4 py-4 gap-2 text-center">
+								{routeList.map((route, index) => (
+									<a
+										href={route.href}
+										key={index}
+										className="py-1 border-b border-neutral-600"
+									>
+										{route.label}
+									</a>
+								))}
+								<a
+									rel="noreferrer noopener"
+									href="https://www.linkedin.com/in/steven-fojas-8a1516241/"
+									target="__blank"
+								>
+									<button className="hover:bg-neutral-800 rounded-md transition-all duration-100 hover:cursor-pointer px-4 py-2">
+										<FaLinkedin size={20} />
+									</button>
+								</a>
+							</div>
+						</motion.div>
+					)}
+				</AnimatePresence>
 			</div>
-			{/* Mobile Menu */}
-			<div className={`${mobileMenuShown ? "block" : "hidden"}`}>
-				<a href="#About" className="block py-2 px-4">
-					About
-				</a>
-				<a href="#Projects" className="block py-2 px-4">
-					Projects
-				</a>
-				<a href="#Experience" className="block py-2 px-4">
-					Experience
-				</a>
-				<a href="#Certifications" className="block py-2 px-4">
-					Certifications
-				</a>
-				<a href="#Contact" className="block py-2 px-4">
-					Contact
-				</a>
-			</div>
-		</nav>
+		</header>
 	)
 }
