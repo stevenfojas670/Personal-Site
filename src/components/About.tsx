@@ -17,24 +17,22 @@ export default function About() {
 					<br></br>
 					<p>
 						Throughout college, I've gained a bit of experience in everything
-						such as Machine Learning, Software Engineering, Cybersecurity, and
-						Network Operations.
+						such as Software Engineering, Cybersecurity, and Network Operations.
 					</p>
 					<br></br>
 					<p>
 						I have experience in Full-Stack Development through internships and
-						self-study, utilizing hybrid agile methodologies for project
-						management and frontend and backend technologies, including
-						JavaScript, React.js, Next.js, C#, and .NET, among others.
+						self-study, utilizing frontend and backend technologies, including
+						JavaScript, jQuery, React, Next.js, and .NET, and Django.
 					</p>
 					<br></br>
 					<p>
 						As of 2025, I'm set to graduate in August and plan to further
 						enhance my expertise by pursuing the AWS Solutions Architect and
-						CompTIA CySA+, and Linux+ certifications. Additionally, I'm
-						expanding my knowledge in network infrastructure configuration,
-						maintenance, and security while refining my Full-Stack Development
-						skills, particularly in React, Python, and Django.
+						CompTIA CySA+ certifications. Additionally, I'm expanding my
+						knowledge in network infrastructure configuration, maintenance, and
+						security while refining my Full-Stack Development skills,
+						particularly in React, Python, and Django.
 					</p>
 					<br></br>
 					<p>

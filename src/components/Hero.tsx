@@ -6,7 +6,7 @@ export default function Hero() {
 				<main className="font-bold text-xl md:text-4xl">
 					<h1>
 						<span>
-							I'm Steven Fojas, an aspiring Software Engineer and Cybersecurity
+							I'm Steven Fojas, an aspiring Software Engineer or Cybersecurity
 							Professional
 						</span>
 					</h1>

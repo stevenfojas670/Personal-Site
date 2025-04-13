@@ -128,11 +128,10 @@ export const experiences = [
 			{
 				title: "Vulnerability Management, Compliance, and System Hardening",
 				description: [
-					"Performed vulnerability and compliance scans against CIS benchmarks and remediated over 80 assets per month.",
+					"Performed vulnerability and compliance scans against CIS benchmarks and assisted in remediating assets.",
 					"Coordinated with asset owners to apply security patches and compliance configurations.",
 					"Assisted in configuring, maintaining, and securing F5 BIG-IP systems.",
 					"Handled certificate management via AppViewX, by renewing, enrolling, issuing, and revoking device certificates.",
-					"Ensured secure authentication via TACACS+ policies for network devices using Cisco ISE.",
 				],
 			},
 		],
@@ -145,7 +144,7 @@ export const experiences = [
 			{
 				title: "Developed a Static Website for a University Startup",
 				description: [
-					"Prior to knowing anything about AWS, I naively deployed a static website onto an AWS EC2 instance.",
+					"Deployed a static website onto an AWS EC2 instance.",
 					"Designed and developed a responsive frontend using Next.js, React, Framer Motion, and Material-UI.",
 					"Utilized UI/UX design tools, including ReadyMag, Inkscape, and Midjourney to craft a web interface.",
 				],
