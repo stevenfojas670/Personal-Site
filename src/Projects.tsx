@@ -8,10 +8,10 @@ export default function Projects() {
 				<h1 className="font-bold text-2xl md:text-3xl mb-3">Projects</h1>
 				<div>
 					<p className="text-md">
-						Welcome to my projects sections! I'll be sharing some work projects
-						and personal projects here. This is still under construction as I
-						type out some of my projects. My work projects are kinda hefty so
-						this will take a bit.
+						Welcome to my projects section! I'll be going in depth on some of my
+						past projects from internships, my senior desing project and some
+						personal projects. This is still under construction as I'm thinking
+						of how to desing this section.
 					</p>
 				</div>
 			</div>

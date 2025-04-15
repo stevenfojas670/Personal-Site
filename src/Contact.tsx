@@ -1,23 +1,31 @@
+import { Button } from "@/components/ui/button"
+import {
+	Card,
+	CardDescription,
+	CardFooter,
+	CardHeader,
+	CardTitle,
+} from "@/components/ui/card"
+import { FaLinkedin } from "react-icons/fa"
+
 export default function Contact() {
 	return (
-		<section
-			id="contact"
-			className="container justify-self-center py-20 md:py-32 "
-		>
-			<div className="text-center md:px-6">
-				<h1 className="font-bold text-2xl md:text-3xl mb-10">Contact Me</h1>
-				<div className="flex flex-col items-center flex-shrink-0 w-24 snap-center justify-self-center">
+		<section id="contact" className="flex justify-center py-20 lg:py-20">
+			<Card className="bg-primary border-secondary/20 text-secondary w-[200px]">
+				<CardHeader>
+					<CardTitle className="text-lg">Connect with me</CardTitle>
+				</CardHeader>
+				<CardFooter className="flex justify-between">
 					<a
 						href="https://www.linkedin.com/in/steven-fojas-8a1516241/"
-						target="__blank"
+						target="_blank"
+						rel="noopener noreferrer"
+						className="text-3xl text-secondary hover:text-secondary/80 transition"
 					>
-						<img
-							className="w-8 h-8 drop-shadow-md hover:opacity-50"
-							src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
-						/>
+						<FaLinkedin />
 					</a>
-				</div>
-			</div>
+				</CardFooter>
+			</Card>
 		</section>
 	)
 }

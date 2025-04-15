@@ -19,7 +19,7 @@ const routeList: RouteProps[] = [
 	},
 	{
 		href: "#projects",
-		label: "Projects",
+		label: "Projects and Certifications",
 	},
 	{
 		href: "#contact",
@@ -30,7 +30,7 @@ const routeList: RouteProps[] = [
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
 	return (
-		<header className="top-0 border-b-1 z-40 w-full ">
+		<header className="top-0 border-b-1 border-primary z-40 w-full ">
 			<div className="container justify-self-center">
 				{/* mobile */}
 				<div className="mx-auto">
@@ -82,7 +82,7 @@ export default function Navbar() {
 					<div className="space-x-4">
 						{routeList.map((route, index) => (
 							<a rel="noreferrer noopener" key={index} href={route.href}>
-								<Button className="bg-transparent text-secondary hover:bg-secondary/20">
+								<Button variant="link" className="text-secondary">
 									{route.label}
 								</Button>
 							</a>
@@ -94,7 +94,7 @@ export default function Navbar() {
 							href="https://www.linkedin.com/in/steven-fojas-8a1516241/"
 							target="__blank"
 						>
-							<Button className="bg-transparent text-secondary hover:bg-secondary/20">
+							<Button variant="link" className="text-secondary">
 								<FaLinkedin size={20} />
 							</Button>
 						</a>
@@ -110,13 +110,9 @@ export default function Navbar() {
 							transition={{ ease: "easeIn", duration: 0.4 }}
 							className="overflow-hidden"
 						>
-							<div className="flex flex-col justify-center px-4 py-4 gap-2 text-center">
+							<div className="flex flex-col justify-center px-4 py-4 gap-2">
 								{routeList.map((route, index) => (
-									<a
-										href={route.href}
-										key={index}
-										className="py-1 border-b border-neutral-600"
-									>
+									<a href={route.href} key={index} className="py-1">
 										{route.label}
 									</a>
 								))}
