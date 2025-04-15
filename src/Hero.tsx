@@ -2,9 +2,8 @@ import { Button } from "@/components/ui/button"
 
 export default function Hero() {
 	return (
-		<section className="container justify-self-center py-20 md:py-32 px-4">
-			<div className="text-center md:text-start space-y-6">
-				{/* main content */}
+		<section className="w-full py-20 lg:py-32 flex justify-center border-b-1 border-primary">
+			<div className="container px-4 text-center md:text-start space-y-6">
 				<main className="font-bold text-xl md:text-4xl">
 					<h1>
 						<span>
@@ -13,15 +12,18 @@ export default function Hero() {
 						</span>
 					</h1>
 				</main>
-				{/* subtitle */}
-				<p>Stay persistent</p>
-				{/* links */}
 				<div className="flex flex-wrap gap-2 justify-center md:justify-start font-bold">
-					<Button className="bg-accent hover:bg-accent/90">Contact Me</Button>
 					<Button className="bg-accent hover:bg-accent/90">
-						Certifications
+						<a href="#contact">Contact Me</a>
 					</Button>
-					<Button className="bg-accent hover:bg-accent/90">Resume</Button>
+					<Button className="bg-accent hover:bg-accent/90">
+						<a href="#certifications">Certifications</a>
+					</Button>
+					<Button className="bg-accent hover:bg-accent/90">
+						<a href="/pdfs/Resume.pdf" target="__blank">
+							Resume
+						</a>
+					</Button>
 				</div>
 			</div>
 		</section>

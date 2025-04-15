@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { FaLinkedin } from "react-icons/fa"
+import { FaLinkedin, FaGithub } from "react-icons/fa"
 import { Button, buttonVariants } from "./components/ui/button"
 
 interface RouteProps {
@@ -18,8 +18,12 @@ const routeList: RouteProps[] = [
 		label: "Experience",
 	},
 	{
+		href: "#certifications",
+		label: "Certifications",
+	},
+	{
 		href: "#projects",
-		label: "Projects and Certifications",
+		label: "Projects",
 	},
 	{
 		href: "#contact",
@@ -88,16 +92,27 @@ export default function Navbar() {
 							</a>
 						))}
 					</div>
-					<div id="social-links" className="flex items-center">
-						<a
-							rel="noreferrer noopener"
-							href="https://www.linkedin.com/in/steven-fojas-8a1516241/"
-							target="__blank"
-						>
-							<Button variant="link" className="text-secondary">
-								<FaLinkedin size={20} />
-							</Button>
-						</a>
+					<div id="social-links" className="flex items-center space-x-4">
+						<span>
+							<a
+								rel="noreferrer noopener"
+								href="https://www.linkedin.com/in/steven-fojas-8a1516241/"
+								target="__blank"
+								className="text-xl"
+							>
+								<FaLinkedin />
+							</a>
+						</span>
+						<span>
+							<a
+								rel="noreferrer noopener"
+								href="https://github.com/stevenfojas670"
+								target="__blank"
+								className="text-xl"
+							>
+								<FaGithub />
+							</a>
+						</span>
 					</div>
 				</nav>
 				{/* mobile menu */}
