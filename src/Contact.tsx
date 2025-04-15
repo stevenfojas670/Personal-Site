@@ -2,7 +2,7 @@ export default function Contact() {
 	return (
 		<section
 			id="contact"
-			className="container justify-self-center py-20 md:py-32 bg-neutral-950"
+			className="container justify-self-center py-20 md:py-32 "
 		>
 			<div className="text-center md:px-6">
 				<h1 className="font-bold text-2xl md:text-3xl mb-10">Contact Me</h1>

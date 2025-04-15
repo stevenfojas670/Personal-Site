@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { FaLinkedin } from "react-icons/fa"
+import { Button, buttonVariants } from "./components/ui/button"
 
 interface RouteProps {
 	href: string
@@ -29,11 +30,11 @@ const routeList: RouteProps[] = [
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
 	return (
-		<header className="sticky top-0 border-b-1 border-neutral-600 z-40 w-full bg-neutral-950">
+		<header className="top-0 border-b-1 z-40 w-full ">
 			<div className="container justify-self-center">
 				{/* mobile */}
 				<div className="mx-auto">
-					<nav className="md:hidden flex gap-2 justify-between text-xl px-4">
+					<nav className="lg:hidden flex gap-2 justify-between text-xl px-4">
 						<div>
 							<button>
 								<a href="#" className="flex items-center py-4 px-2">
@@ -77,25 +78,25 @@ export default function Navbar() {
 					</nav>
 				</div>
 				{/* desktop */}
-				<nav className="hidden md:flex justify-center py-4 gap-2">
+				<nav className="hidden lg:flex justify-center py-4 space-x-4">
 					<div className="space-x-4">
 						{routeList.map((route, index) => (
 							<a rel="noreferrer noopener" key={index} href={route.href}>
-								<button className="hover:bg-neutral-800 rounded-md transition-all duration-100 hover:cursor-pointer px-4 py-2">
+								<Button className="bg-transparent text-secondary hover:bg-secondary/20">
 									{route.label}
-								</button>
+								</Button>
 							</a>
 						))}
 					</div>
-					<div id="social-links" className="space-x-4 flex items-center">
+					<div id="social-links" className="flex items-center">
 						<a
 							rel="noreferrer noopener"
 							href="https://www.linkedin.com/in/steven-fojas-8a1516241/"
 							target="__blank"
 						>
-							<button className="hover:bg-neutral-800 rounded-md transition-all duration-100 hover:cursor-pointer px-4 py-2">
+							<Button className="bg-transparent text-secondary hover:bg-secondary/20">
 								<FaLinkedin size={20} />
-							</button>
+							</Button>
 						</a>
 					</div>
 				</nav>

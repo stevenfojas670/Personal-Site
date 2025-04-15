@@ -2,10 +2,10 @@ export default function About() {
 	return (
 		<section
 			id="about"
-			className="px-4 md:px-6 py-20 md:py-32 mx-auto justify-center container"
+			className="px-4 md:py-32 mx-auto justify-center container"
 		>
-			<div className="md:px-6 py-6 bg-neutral-950">
-				<h1 className="font-bold justify-self-center text-2xl md:text-3xl mb-10">
+			<div className="space-y-6">
+				<h1 className="font-bold justify-self-center text-2xl md:text-3xl">
 					About Me
 				</h1>
 				<div>
