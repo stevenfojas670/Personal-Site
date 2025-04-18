@@ -13,7 +13,7 @@ Welcome to my personal site, built with modern frontend tools and designed for b
 
 ## ✅ GitHub Actions
 
-This project uses [GitHub Actions](https://github.com/features/actions) to automatically lint your code on every push and pull request.
+This project uses [GitHub Actions](https://github.com/features/actions) to automatically lint my code on every push and pull request.
 
 See the workflow in `.github/workflows/checks.yml`.
 
