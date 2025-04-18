@@ -10,7 +10,7 @@ import Certifications from "./Certifications"
 
 function App() {
 	return (
-		<div className="bg-foreground text-secondary">
+		<div className="bg-background text-secondary">
 			<NavBar />
 			<Hero />
 			<About />

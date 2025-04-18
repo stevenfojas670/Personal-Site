@@ -67,7 +67,7 @@ export default function Timeline() {
 							></div>
 							<div className="w-6 h-6 bg-accent rounded-full translate-x-[6.5px] translate-y-5 hover:border"></div>
 						</div>
-						<div className="bg-accent-foreground border-secondary/20 border rounded-lg px-8 py-6 w-full sm:w-xl">
+						<div className="bg-card border-card-20 border-1 rounded-lg px-8 py-6 w-full sm:w-xl">
 							<div className="text-xl font-medium">{job.role}</div>
 							<div>{job.company}</div>
 							<div className="mb-4 sm:text-sm">
@@ -107,7 +107,7 @@ export default function Timeline() {
 							<div className="flex flex-wrap mb-4 gap-1">
 								{job.tech.map((tech, index) => (
 									<Badge
-										className="bg-secondary/10"
+										className="bg-popover text-secondary"
 										variant="default"
 										key={index}
 									>

@@ -1,16 +1,11 @@
 import { Button } from "@/components/ui/button"
-import {
-	Card,
-	CardDescription,
-	CardFooter,
-	CardHeader,
-	CardTitle,
-} from "@/components/ui/card"
+import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { FaLinkedin } from "react-icons/fa"
+import { Section } from "./components/SteveUI"
 
 export default function Contact() {
 	return (
-		<section id="contact" className="flex justify-center py-20 lg:py-20">
+		<Section id={"contact"}>
 			<Card className="bg-primary border-secondary/20 text-secondary w-[200px]">
 				<CardHeader>
 					<CardTitle className="text-lg">Connect with me</CardTitle>
@@ -26,6 +21,6 @@ export default function Contact() {
 					</a>
 				</CardFooter>
 			</Card>
-		</section>
+		</Section>
 	)
 }

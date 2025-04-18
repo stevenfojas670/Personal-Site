@@ -1,19 +1,15 @@
-import { FaGithub } from "react-icons/fa"
-import { Button } from "./components/ui/button"
 import {
 	Accordion,
 	AccordionContent,
 	AccordionItem,
 	AccordionTrigger,
 } from "@/components/ui/accordion"
+import { Section, Container } from "./components/SteveUI"
 
 export default function Projects() {
 	return (
-		<section
-			id="projects"
-			className="lg:px-4 py-20 lg:py-32 mx-auto space-y-3 flex justify-items-center container"
-		>
-			<div className="flex-col">
+		<Section id={"projects"}>
+			<Container>
 				<h1 className="font-bold text-2xl md:text-3xl mb-3">Projects</h1>
 				<div>
 					<p className="">
@@ -72,7 +68,7 @@ export default function Projects() {
 						</span>
 					</div>
 				</div>
-			</div>
-		</section>
+			</Container>
+		</Section>
 	)
 }

@@ -1,10 +1,9 @@
+import { Section, Container } from "./components/SteveUI"
+
 export default function About() {
 	return (
-		<section
-			id="about"
-			className="px-4 md:py-32 mx-auto justify-center container"
-		>
-			<div className="space-y-6">
+		<Section id={"about"}>
+			<Container>
 				<h1 className="font-bold justify-self-center text-2xl md:text-3xl">
 					About Me
 				</h1>
@@ -42,7 +41,7 @@ export default function About() {
 						ready to put in whatever work that needs to be done to get there.
 					</p>
 				</div>
-			</div>
-		</section>
+			</Container>
+		</Section>
 	)
 }

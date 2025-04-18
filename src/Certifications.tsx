@@ -1,17 +1,27 @@
+import { Section, Container } from "./components/SteveUI"
 import { certifications } from "./data"
 import { FaLink } from "react-icons/fa"
 
 export default function Certifications() {
 	return (
-		<section id="certifications">
-			<div className="justify-items-center text-secondary p-4 w-full bg-black flex-col space-y-4">
-				<h1 className="font-bold justify-self-center text-2xl md:text-3xl">
-					Certifications
-				</h1>
-				<div className="flex flex-col gap-4 lg:flex-row lg:gap-4 z-10">
+		<Section id={"certifications"}>
+			<Container>
+				<div className="w-full">
+					<h1 className="font-bold text-2xl md:text-3xl mb-3">
+						Certifications
+					</h1>
+					<p>
+						Here are some certifications I've earned so far. I've got a couple
+						other certifications on my list for this year. I'm planning to get
+						the AWS Solutions Architect in Summer 2025 and CompTIA CySA+ some
+						time at the end of this year.
+					</p>
+				</div>
+
+				<div className="flex flex-col gap-4 lg:flex-row lg:gap-4 z-10 justify-center">
 					{certifications.map((cert, index) => (
 						<a href={cert.link} key={index} target="_blank">
-							<div className="bg-accent-foreground border-secondary/20 border rounded-lg w-[250px] h-[250px] relative hover:bg-primary/80 transition duration-200">
+							<div className="bg-card border-card-20 rounded-lg w-[250px] h-[250px] relative hover:bg-popover transition duration-200">
 								<div className="absolute top-4 right-4">
 									<FaLink />
 								</div>
@@ -19,14 +29,15 @@ export default function Certifications() {
 									<img
 										src={cert.icon}
 										alt={cert.name}
-										className="w-42 h-42 object-contain"
+										className="w-32 object-contain"
 									/>
+									<a href={cert.link} target="__blank"></a>
 								</div>
 							</div>
 						</a>
 					))}
 				</div>
-			</div>
-		</section>
+			</Container>
+		</Section>
 	)
 }

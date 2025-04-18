@@ -1,9 +1,10 @@
 import { Button } from "@/components/ui/button"
+import { Section, Container } from "@/components/SteveUI"
 
 export default function Hero() {
 	return (
-		<section className="w-full py-20 lg:py-32 flex justify-center border-b-1 border-primary">
-			<div className="container px-4 text-center md:text-start space-y-6">
+		<Section id={"home"}>
+			<Container>
 				<main className="font-bold text-xl md:text-4xl">
 					<h1>
 						<span>
@@ -25,7 +26,7 @@ export default function Hero() {
 						</a>
 					</Button>
 				</div>
-			</div>
-		</section>
+			</Container>
+		</Section>
 	)
 }

@@ -63,17 +63,17 @@ export const certifications = [
 	{
 		name: "CompTIA Network+",
 		icon: "/icons/networkplus-logo.svg",
-		link: "https://www.credly.com/earner/earned/badge/17744d93-a3f8-40f6-a43d-0594f07654e3",
+		link: "/pdfs/netplus.pdf",
 	},
 	{
 		name: "CompTIA Security+",
 		icon: "/icons/securityplus-logo.svg",
-		link: "https://www.credly.com/earner/earned/badge/11f6d120-07e6-4eaa-ba14-dcdbf5b02d9b",
+		link: "/pdfs/secplus.pdf",
 	},
 	{
 		name: "AWS CCP",
 		icon: "/icons/awsccp-logo.png",
-		link: "https://www.credly.com/earner/earned/badge/d07e2e64-88b1-4e93-ade9-aeb093a61caa",
+		link: "/pdfs/aws.pdf",
 	},
 ]
 

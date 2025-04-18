@@ -34,7 +34,7 @@ const routeList: RouteProps[] = [
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
 	return (
-		<header className="top-0 border-b-1 border-primary z-40 w-full ">
+		<header className="top-0 border-b-1 border-border z-40 w-full ">
 			<div className="container justify-self-center">
 				{/* mobile */}
 				<div className="mx-auto">
@@ -136,7 +136,7 @@ export default function Navbar() {
 									href="https://www.linkedin.com/in/steven-fojas-8a1516241/"
 									target="__blank"
 								>
-									<button className="hover:bg-neutral-800 rounded-md transition-all duration-100 hover:cursor-pointer px-4 py-2">
+									<button className="rounded-md transition-all duration-100 hover:cursor-pointer px-4 py-2">
 										<FaLinkedin size={20} />
 									</button>
 								</a>
