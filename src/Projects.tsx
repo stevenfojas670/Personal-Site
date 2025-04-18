@@ -5,6 +5,24 @@ import {
 	AccordionTrigger,
 } from "@/components/ui/accordion"
 import { Section, Container } from "./components/SteveUI"
+import { projects } from "@/data/projects"
+import { TbPointFilled } from "react-icons/tb"
+import { Badge } from "./components/ui/badge"
+
+interface Projects {
+	id: number
+	title: string
+	description: string | null
+	details: string[]
+	stack: ProjectsStack[] | null
+	link: string | null
+}
+
+interface ProjectsStack {
+	id: number
+	section: string
+	technologies: string[] | null
+}
 
 export default function Projects() {
 	return (
@@ -14,50 +32,65 @@ export default function Projects() {
 				<div>
 					<p className="">
 						Welcome to my projects section! I'll be going in depth on some of my
-						past projects from internships, my senior desing project and some
+						past projects from internships, my senior design project and some
 						personal projects. This is still under construction as I'm thinking
-						of how to desing this section.
+						of how to design this section.
 					</p>
 					<div>
 						<Accordion type="single" collapsible className="w-full">
-							<AccordionItem value="item-1">
-								<AccordionTrigger>Class Scraper</AccordionTrigger>
-								<AccordionContent>
-									<a
-										href="https://github.com/stevenfojas670/Class-Scraper"
-										target="__blank"
-										className="text-blue-300 hover:border-b-1 hover:border-blue-300"
-									>
-										https://github.com/stevenfojas670/Class-Scraper
-									</a>
-								</AccordionContent>
-							</AccordionItem>
-							<AccordionItem value="item-2">
-								<AccordionTrigger>Personal Website</AccordionTrigger>
-								<AccordionContent>
-									<ul>
-										<li>
-											That would be this site! I created this using some Shadcn
-											components, tailwindcss, and React/Vite.
-										</li>
-										<li></li>
-									</ul>
-								</AccordionContent>
-							</AccordionItem>
-							<AccordionItem value="item-3">
-								<AccordionTrigger>Is it animated?</AccordionTrigger>
-								<AccordionContent>
-									Yes. It's animated by default, but you can disable it if you
-									prefer.
-								</AccordionContent>
-							</AccordionItem>
+							{projects.map((project) => (
+								<AccordionItem value={`item-${project.id}`} key={project.id}>
+									<AccordionTrigger>{project.title}</AccordionTrigger>
+									<AccordionContent>
+										<div className="mb-2">
+											<h1 className="mb-2 font-bold">Github Link</h1>
+											<a
+												href="https://github.com/stevenfojas670/Class-Scraper"
+												target="__blank"
+												className="text-blue-300 hover:border-b-1 hover:border-blue-300"
+											>
+												{project.link}
+											</a>
+										</div>
+										<div className="mb-2">
+											<h1 className="mb-2 font-bold">Description</h1>
+											<p>{project.description}</p>
+										</div>
+										<div className="mb-2">
+											<ul className="space-y-2">
+												{project.details.map((det, index) => (
+													<li key={index}>
+														<div className="flex">
+															<TbPointFilled />
+															{det}
+														</div>
+													</li>
+												))}
+											</ul>
+										</div>
+										<div className="space-y-2">
+											{project.stack?.map((stackFields: ProjectsStack) => (
+												<div key={stackFields.id}>
+													<h1 className="mb-2 font-bold">
+														{stackFields.section}
+													</h1>
+													<ul className="flex space-x-2">
+														{stackFields.technologies?.map((tech, index) => (
+															<li key={index}>
+																<Badge>{tech}</Badge>
+															</li>
+														))}
+													</ul>
+												</div>
+											))}
+										</div>
+									</AccordionContent>
+								</AccordionItem>
+							))}
 						</Accordion>
 					</div>
 					<div className="flex gap-4">
-						<p>
-							In the mean time here is a link to my github if you wanted to poke
-							around.
-						</p>
+						<p>Feel free to look around my github!</p>
 						<span className="">
 							<a
 								href="https://github.com/stevenfojas670"

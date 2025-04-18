@@ -1,120 +1,36 @@
-export const tools = [
-	{
-		name: "Git",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg",
-	},
-	{
-		name: "Tenable",
-		icon: "/icons/tenable-icon.svg",
-	},
-	{
-		name: "AppViewX",
-		icon: "/icons/appviewx-logo.svg",
-	},
-	{
-		name: "F5 BIG-IP",
-		icon: "/icons/f5-logo.svg",
-	},
-	{
-		name: "Docker",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain-wordmark.svg",
-	},
-	{
-		name: "AWS",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
-	},
-]
-
-export const libraries = [
-	{
-		name: "Tailwind CSS",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg",
-	},
-	{
-		name: "Bootstrap 5",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg",
-	},
-	{
-		name: "Material UI",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materialui/materialui-original.svg",
-	},
-]
-
-export const frameworks = [
-	{
-		name: "React.js",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-	},
-	{
-		name: "Next.js",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg",
-	},
-	{
-		name: "Django",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg",
-	},
-	{
-		name: ".NET",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-plain-wordmark.svg",
-	},
-]
-
-export const certifications = [
-	{
-		name: "CompTIA Network+",
-		icon: "/icons/networkplus-logo.svg",
-		link: "/pdfs/netplus.pdf",
-	},
-	{
-		name: "CompTIA Security+",
-		icon: "/icons/securityplus-logo.svg",
-		link: "/pdfs/secplus.pdf",
-	},
-	{
-		name: "AWS CCP",
-		icon: "/icons/awsccp-logo.png",
-		link: "/pdfs/aws.pdf",
-	},
-]
-
-export const languages = [
-	{
-		name: "C++",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
-	},
-	{
-		name: "C#",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg",
-	},
-	{
-		name: "JavaScript",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-	},
-	{
-		name: "HTML5",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
-	},
-	{
-		name: "CSS3",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
-	},
-	{
-		name: "Python",
-		icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-	},
-]
-
 export const experiences = [
 	{
 		id: 1,
 		role: "Network Analyst Intern",
 		company: "Southwest Gas Corporation",
 		duration: "June 2024 - Present",
+		etc: "",
 		location: "Las Vegas, Nevada",
-		tech: ["Cisco", "F5 BIG-IP", "AppViewX", "Tenable"],
+		tech: [
+			"Packet Analysis",
+			"Log Analysis",
+			"Firewall Configuration",
+			"Load Balancing Configuration",
+			"Certificate Management",
+			"Automation",
+			"Network Configuration",
+		],
 		details: [
 			{
 				id: 1,
+				title: "System Management, Maintenance, and Support",
+				description: [
+					"Managed, maintained and supported F5 BIG-IP LTM, ASM, APM, and GTM performing load balancing configurations for internal and external traffic to our web applications, servers, etc.",
+					"Performed Local Traffic Management configurations such as setting up virtual servers for web applications on HTTP/HTTPS with health monitoring, persistence profiles to maintain sessions across servers, SSL encryption and decryption for packet analysis, and URL redirects with iRules.",
+					"Performed Application Security Management configurations such as creating or editing allow or deny rules for client-server communication such as HTTP requests.",
+					"Troubleshoot infrastructure application or network communication issues using packet analysis with Wireshark, log analysis built-in log systems in infrastructure applications or TCPDUMP, and working with multiple IT infrastructure teams to identify root cause.",
+					"Managed, maintained and supported our certificate management application AppViewX through Certificate Service Request (CSR) policy creation, certificate expiry report configurations, and certificate discovery scanning.",
+					"Performed troubleshooting across all layers of the OSI model.",
+					"Assisted in switch racking and stacking following wiring and rack diagrams.",
+				],
+			},
+			{
+				id: 2,
 				title: "Enhanced Asset Visibility and Compliance in Tenable",
 				description: [
 					"Developed a structured approach to identify assets not tracked in our vulnerability management system Tenable.",
@@ -125,7 +41,7 @@ export const experiences = [
 				],
 			},
 			{
-				id: 2,
+				id: 3,
 				title: "Enhancing Authenticated Scanning for Vulnerability Management",
 				description: [
 					"Resolved credential misconfigurations to enable authenticated Tenable vulnerability scans.",
@@ -134,14 +50,12 @@ export const experiences = [
 				],
 			},
 			{
-				id: 3,
-				title:
-					"Vulnerability Management, System Management and Security Configuration",
+				id: 4,
+				title: "Vulnerability Management and Security Configuration",
 				description: [
-					"Performed vulnerability and compliance scans against CIS benchmarks and assisted in remediating assets.",
-					"Coordinated with asset owners to apply security patches and compliance configurations.",
-					"Managed and maintained F5 BIG-IP systems by performing system upgrades, patching, and traffic management configurations to manage internal and external traffic.",
-					"Managed the certificate management system AppViewX by developing policies on Certificate Service Requests (CSR), enrolling, revoking, renewing device certificates.",
+					"Performed vulnerability and compliance scans against CIS benchmarks.",
+					"Coordinated with asset owners to apply security patches and compliance configurations on Cisco, F5, Arista, Cradlepoint, and Palo Alto devices.",
+					"Regularly monitor our network infrastructure security posture using Tenable Vulnerability Management to identify vulnerabilities and triage them to correct team members for remediation.",
 				],
 			},
 		],
@@ -151,6 +65,7 @@ export const experiences = [
 		role: "Web Development Intern",
 		company: "NeuroNexum",
 		duration: "January 2024 - June 2024",
+		etc: "",
 		location: "Las Vegas, Nevada",
 		tech: ["React", "AWS", "MUI", "UI/UX"],
 		details: [
@@ -170,6 +85,7 @@ export const experiences = [
 		role: "Full Stack Development Intern",
 		company: "Mission Services and Test Support",
 		duration: "May 2023 - August 2023",
+		etc: "",
 		location: "Las Vegas, Nevada",
 		tech: ["jQuery", "HTML/CSS", "C#", ".NET-7"],
 		details: [
@@ -192,6 +108,7 @@ export const experiences = [
 		role: "IT Services Technician",
 		company: "University of Nevada, Las Vegas",
 		duration: "August 2022 - August 2024",
+		etc: "",
 		location: "Las Vegas, Nevada",
 		tech: ["Crestron", "Classroom Support", "AV", "Jira"],
 		details: [
@@ -213,6 +130,7 @@ export const experiences = [
 		role: "Tiler",
 		company: "Spartan Pools",
 		duration: "December 2021 - July 2022",
+		etc: "",
 		location: "Las Vegas, Nevada",
 		tech: ["Trade Skills"],
 		details: [
@@ -233,6 +151,7 @@ export const experiences = [
 		role: "Senior Recreation Assistant",
 		company: "City of Henderson",
 		duration: "August 2018 - August 2020",
+		etc: "",
 		location: "Las Vegas, Nevada",
 		tech: ["Customer Service"],
 		details: [
@@ -262,6 +181,7 @@ export const experiences = [
 		role: "Bagger",
 		company: "Smith's Food and Drug",
 		duration: "March 2018 - August 2018",
+		etc: "",
 		location: "Las Vegas, Nevada",
 		tech: ["Customer Service"],
 		details: [

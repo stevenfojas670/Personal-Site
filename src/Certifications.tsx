@@ -1,5 +1,5 @@
 import { Section, Container } from "./components/SteveUI"
-import { certifications } from "./data"
+import { certifications } from "./data/misc"
 import { FaLink } from "react-icons/fa"
 
 export default function Certifications() {

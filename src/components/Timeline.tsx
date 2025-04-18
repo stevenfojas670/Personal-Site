@@ -1,4 +1,4 @@
-import { experiences as experienceData } from "@/data"
+import { experiences as experienceData } from "@/data/experience"
 import { Button } from "./ui/button"
 import { Badge } from "./ui/badge"
 import { BsArrowsAngleExpand } from "react-icons/bs"
