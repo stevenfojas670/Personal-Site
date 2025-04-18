@@ -1,6 +1,6 @@
 # 🌐 Personal Portfolio Website
 
-Welcome to my personal site, built with modern frontend tools and designed for performance, aesthetics, and responsiveness.
+Welcome to my personal site, built with modern frontend tools and designed for both desktop and mobile devices.
 
 ## 🚀 Tech Stack
 
