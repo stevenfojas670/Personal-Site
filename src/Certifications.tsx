@@ -20,8 +20,7 @@ export default function Certifications() {
 
 				<div className="flex flex-col gap-4 lg:flex-row lg:gap-4 z-10 justify-center">
 					{certifications.map((cert, index) => (
-						<div key={index}>
-							<a href={cert.link} target="__blank"></a>
+						<a key={index} href={cert.link} target="__blank">
 							<div className="bg-card border-card-20 rounded-lg w-[250px] h-[250px] relative hover:bg-popover transition duration-200">
 								<div className="absolute top-4 right-4">
 									<FaLink />
@@ -32,10 +31,9 @@ export default function Certifications() {
 										alt={cert.name}
 										className="w-32 object-contain"
 									/>
-									<a href={cert.link} target="__blank"></a>
 								</div>
 							</div>
-						</div>
+						</a>
 					))}
 				</div>
 			</Container>
