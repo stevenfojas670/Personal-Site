@@ -107,9 +107,12 @@ export const projects = [
 		description: `This is simple weather app built using express.js and WeatherAPI. I've built this simply to
         work on my Javascript fundamentals before working on PRISM using React on the frontend.`,
 		details: [
-			"Simple app that displays a single card with a drop down to select a location.",
-			"After selecting a location, a card displays the weather.",
-			"Multiple location and weather data are displayed on a grid.",
+			"The user can type in a location and retrieve temperature data using the WeatherAPI.",
+			"Multiple locations can be displayed at once.",
+			"Utilizes an expressjs backend with a single defined route and controller for API requests.",
+			"Experimented with a logging system to log API calls.",
+			"Logs tracked timestamps, HTTP request method type, url, response, etc using morgan.",
+			"Eventually I'd like to look into how to using anomaly detection on user activites through API requests.",
 		],
 		stack: [
 			{
@@ -120,7 +123,7 @@ export const projects = [
 			{
 				id: 2,
 				section: "Backend",
-				technologies: ["Expressjs", "WeatherAPI"],
+				technologies: ["Expressjs", "WeatherAPI", "Nodejs", "morgan"],
 			},
 		],
 		link: "https://github.com/stevenfojas670/JavaScript",
