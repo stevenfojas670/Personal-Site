@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
-import { Button, buttonVariants } from "./components/ui/button"
+import { Button } from "./components/ui/button"
 
 interface RouteProps {
 	href: string
