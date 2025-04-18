@@ -1,54 +1,56 @@
-# React + TypeScript + Vite
+# 🌐 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal site, built with modern frontend tools and designed for performance, aesthetics, and responsiveness.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** (with [Vite](https://vitejs.dev)) — for fast development and optimized builds
+- **TypeScript** — safer and more scalable code
+- **Tailwind CSS** — utility-first CSS framework for rapid styling
+- **ShadCN/UI** — beautiful, accessible components built with Radix UI and Tailwind
+- **Framer Motion** — smooth and engaging animations
+- **ESLint** — consistent code style, with GitHub Actions integration
 
-## Expanding the ESLint configuration
+## ✅ GitHub Actions
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+This project uses [GitHub Actions](https://github.com/features/actions) to automatically lint your code on every push and pull request.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+See the workflow in `.github/workflows/checks.yml`.
+
+## 📦 Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org) (v18+ recommended)
+
+### Installation
+
+```bash
+# Clone the repo
+git clone https://github.com/yourusername/your-repo-name.git
+
+# Navigate in
+cd your-repo-name
+
+# Install dependencies
+npm install
+
+# Run locally on port 3000
+npm run dev
+
+# Lint
+npm run lint
+
+# Build
+npm run build
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Photos
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+![image](https://github.com/user-attachments/assets/8e08860e-9a09-4181-a208-9dca029044b3)
+![image](https://github.com/user-attachments/assets/3dda932a-1d19-4bbf-925f-b357cb196cad)
+![image](https://github.com/user-attachments/assets/974f12da-34fa-4b99-83d1-d4c395725165)
+![image](https://github.com/user-attachments/assets/cfc98d8b-603c-4471-a733-1704fe4a82fc)
+![image](https://github.com/user-attachments/assets/5c23b477-d242-493b-a872-854527e99728)
+![image](https://github.com/user-attachments/assets/f9af1e99-e366-4e45-abb6-c2c32f436d79)
+![image](https://github.com/user-attachments/assets/ec2e158b-33a7-4765-be19-0d6dc67d0e81)
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
