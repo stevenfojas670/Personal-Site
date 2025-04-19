@@ -17,7 +17,6 @@ export default function Certifications() {
 						time at the end of this year.
 					</p>
 				</div>
-
 				<div className="flex flex-col gap-4 lg:flex-row lg:gap-4 z-10 justify-center">
 					{certifications.map((cert, index) => (
 						<a key={index} href={cert.link} target="__blank">

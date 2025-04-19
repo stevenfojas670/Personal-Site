@@ -5,11 +5,11 @@ import { Section } from "./components/SteveUI"
 export default function Contact() {
 	return (
 		<Section id={"contact"}>
-			<Card className="bg-primary border-secondary/20 text-secondary w-[200px]">
+			<Card className="bg-blue-500 border-secondary/20 text-secondary w-[200px]">
 				<CardHeader>
 					<CardTitle className="text-lg">Connect with me</CardTitle>
 				</CardHeader>
-				<CardFooter className="flex justify-between">
+				<CardFooter className="flex justify-center">
 					<a
 						href="https://www.linkedin.com/in/steven-fojas-8a1516241/"
 						target="_blank"

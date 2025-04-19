@@ -2,6 +2,8 @@ import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { FaLinkedin, FaGithub } from "react-icons/fa"
 import { Button } from "./components/ui/button"
+import { IoMenu } from "react-icons/io5"
+import { IoHomeSharp } from "react-icons/io5"
 
 interface RouteProps {
 	href: string
@@ -29,60 +31,64 @@ const routeList: RouteProps[] = [
 		href: "#contact",
 		label: "Contact",
 	},
+	{
+		href: "https://www.linkedin.com/in/steven-fojas-8a1516241/",
+		label: "LinkedIn",
+	},
+	{
+		href: "https://github.com/stevenfojas670",
+		label: "GitHub",
+	},
 ]
 
 export default function Navbar() {
 	const [isOpen, setIsOpen] = useState<boolean>(false)
 	return (
-		<header className="top-0 border-b-1 border-border z-40 w-full ">
-			<div className="container justify-self-center">
+		<header className="top-0 border-b-1 border-border z-40 w-full sticky bg-background">
+			<div className="">
 				{/* mobile */}
 				<div className="mx-auto">
-					<nav className="lg:hidden flex gap-2 justify-between text-xl px-4">
+					<nav className="md:hidden flex gap-2 justify-between text-xl px-4">
 						<div>
-							<button>
-								<a href="#" className="flex items-center py-4 px-2">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										strokeWidth={1.5}
-										stroke="currentColor"
-										className="size-6"
-									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-										/>
-									</svg>
-								</a>
-							</button>
+							<a href="#" className="flex items-center py-4 px-2 text-2xl">
+								<button>
+									<IoHomeSharp />
+								</button>
+							</a>
 						</div>
 						<div>
-							<button onClick={() => setIsOpen(!isOpen)}>
-								<a className="flex items-center py-4 px-2">
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										fill="none"
-										viewBox="0 0 24 24"
-										strokeWidth={1.5}
-										stroke="currentColor"
-										className="size-6"
-									>
-										<path
-											strokeLinecap="round"
-											strokeLinejoin="round"
-											d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-										/>
-									</svg>
-								</a>
-							</button>
+							<a className="flex items-center py-4 px-2 text-2xl">
+								<button onClick={() => setIsOpen(!isOpen)}>
+									<IoMenu />
+								</button>
+							</a>
 						</div>
 					</nav>
 				</div>
+				{/* mobile menu */}
+				<AnimatePresence>
+					{isOpen && (
+						<motion.div
+							initial={{ maxHeight: 0 }}
+							animate={{ maxHeight: 500 }}
+							exit={{ maxHeight: 0 }}
+							transition={{ ease: "easeInOut", duration: 0.2 }}
+							className="overflow-hidden"
+						>
+							<ul className="flex flex-col justify-center px-4 py-4 gap-2">
+								{routeList.map((route, index) => (
+									<li key={index}>
+										<a href={route.href} key={index} className="py-1 text-xl">
+											{route.label}
+										</a>
+									</li>
+								))}
+							</ul>
+						</motion.div>
+					)}
+				</AnimatePresence>
 				{/* desktop */}
-				<nav className="hidden lg:flex justify-center py-4 space-x-4">
+				<nav className="hidden md:flex justify-center py-4 space-x-4">
 					<div className="space-x-4">
 						{routeList.map((route, index) => (
 							<a rel="noreferrer noopener" key={index} href={route.href}>
@@ -92,58 +98,7 @@ export default function Navbar() {
 							</a>
 						))}
 					</div>
-					<div id="social-links" className="flex items-center space-x-4">
-						<span>
-							<a
-								rel="noreferrer noopener"
-								href="https://www.linkedin.com/in/steven-fojas-8a1516241/"
-								target="__blank"
-								className="text-xl"
-							>
-								<FaLinkedin />
-							</a>
-						</span>
-						<span>
-							<a
-								rel="noreferrer noopener"
-								href="https://github.com/stevenfojas670"
-								target="__blank"
-								className="text-xl"
-							>
-								<FaGithub />
-							</a>
-						</span>
-					</div>
 				</nav>
-				{/* mobile menu */}
-				<AnimatePresence>
-					{isOpen && (
-						<motion.div
-							initial={{ maxHeight: 0 }}
-							animate={{ maxHeight: 500 }}
-							exit={{ maxHeight: 0 }}
-							transition={{ ease: "easeIn", duration: 0.4 }}
-							className="overflow-hidden"
-						>
-							<div className="flex flex-col justify-center px-4 py-4 gap-2">
-								{routeList.map((route, index) => (
-									<a href={route.href} key={index} className="py-1">
-										{route.label}
-									</a>
-								))}
-								<a
-									rel="noreferrer noopener"
-									href="https://www.linkedin.com/in/steven-fojas-8a1516241/"
-									target="__blank"
-								>
-									<button className="rounded-md transition-all duration-100 hover:cursor-pointer px-4 py-2">
-										<FaLinkedin size={20} />
-									</button>
-								</a>
-							</div>
-						</motion.div>
-					)}
-				</AnimatePresence>
 			</div>
 		</header>
 	)
