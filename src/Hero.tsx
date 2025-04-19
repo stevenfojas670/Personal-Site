@@ -6,12 +6,14 @@ export default function Hero() {
 		<Section id={"home"}>
 			<Container>
 				<main className="font-bold text-xl md:text-4xl">
-					<h1>
-						<span>
-							I'm Steven Fojas, an aspiring Software Engineer or Cybersecurity
-							Professional
-						</span>
-					</h1>
+					<div className="text-center lg:text-start">
+						<h1>
+							<span>
+								I'm Steven Fojas, an aspiring Software Engineer or Cybersecurity
+								Professional
+							</span>
+						</h1>
+					</div>
 				</main>
 				<div className="flex flex-wrap gap-2 justify-center md:justify-start font-bold">
 					<Button className="bg-accent hover:bg-accent/90">

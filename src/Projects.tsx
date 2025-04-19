@@ -70,11 +70,11 @@ export default function Projects() {
 										</div>
 										<div className="space-y-2">
 											{project.stack?.map((stackFields: ProjectsStack) => (
-												<div key={stackFields.id}>
+												<div key={stackFields.id} className="">
 													<h1 className="mb-2 font-bold">
 														{stackFields.section}
 													</h1>
-													<ul className="flex space-x-2">
+													<ul className="flex flex-wrap space-x-2 space-y-2">
 														{stackFields.technologies?.map((tech, index) => (
 															<li key={index}>
 																<Badge>{tech}</Badge>
@@ -88,17 +88,6 @@ export default function Projects() {
 								</AccordionItem>
 							))}
 						</Accordion>
-					</div>
-					<div className="flex gap-4">
-						<p>Feel free to look around my github!</p>
-						<span className="">
-							<a
-								href="https://github.com/stevenfojas670"
-								className="text-blue-300 hover:border-b-1 hover:border-blue-300"
-							>
-								https://github.com/stevenfojas670
-							</a>
-						</span>
 					</div>
 				</div>
 			</Container>

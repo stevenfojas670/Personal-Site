@@ -11,7 +11,7 @@ export default function About() {
 					<p>
 						Welcome to my page! I'm a Senior Computer Science major at the
 						University of Nevada, Las Vegas and I currently work with Southwest
-						Gas Corporation as a Network Services Intern.
+						Gas Corporation as a Network Analyst Intern.
 					</p>
 					<br></br>
 					<p>
@@ -29,9 +29,9 @@ export default function About() {
 						As of 2025, I'm set to graduate in August and plan to further
 						enhance my expertise by pursuing the AWS Solutions Architect and
 						CompTIA CySA+ certifications. Additionally, I'm expanding my
-						knowledge in network infrastructure configuration, maintenance, and
-						security while refining my Full-Stack Development skills,
-						particularly in React, Python, and Django.
+						knowledge in network infrastructure device configuration,
+						maintenance, and security while refining my Application Development
+						skills, particularly with React, Python, and Django.
 					</p>
 					<br></br>
 					<p>

@@ -17,7 +17,7 @@ export default function Certifications() {
 						time at the end of this year.
 					</p>
 				</div>
-				<div className="flex flex-col gap-4 lg:flex-row lg:gap-4 z-10 justify-center">
+				<div className="flex flex-col items-center gap-4 lg:flex-row lg:gap-4 z-10 lg:justify-center">
 					{certifications.map((cert, index) => (
 						<a key={index} href={cert.link} target="__blank">
 							<div className="bg-card border-card-20 rounded-lg w-[250px] h-[250px] relative hover:bg-popover transition duration-200">

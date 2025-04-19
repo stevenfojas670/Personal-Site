@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
-import { FaLinkedin, FaGithub } from "react-icons/fa"
 import { Button } from "./components/ui/button"
 import { IoMenu } from "react-icons/io5"
 import { IoHomeSharp } from "react-icons/io5"
@@ -30,14 +29,6 @@ const routeList: RouteProps[] = [
 	{
 		href: "#contact",
 		label: "Contact",
-	},
-	{
-		href: "https://www.linkedin.com/in/steven-fojas-8a1516241/",
-		label: "LinkedIn",
-	},
-	{
-		href: "https://github.com/stevenfojas670",
-		label: "GitHub",
 	},
 ]
 
@@ -83,6 +74,28 @@ export default function Navbar() {
 										</a>
 									</li>
 								))}
+								<li>
+									<span className="text-xl">
+										<a
+											href="https://www.linkedin.com/in/steven-fojas-8a1516241/"
+											rel="noreferrer noopener"
+											target="__blank"
+										>
+											LinkedIn
+										</a>
+									</span>
+								</li>
+								<li>
+									<span className="text-xl">
+										<a
+											href="https://github.com/stevenfojas670"
+											rel="noreferrer noopener"
+											target="__blank"
+										>
+											GitHub
+										</a>
+									</span>
+								</li>
 							</ul>
 						</motion.div>
 					)}
@@ -97,6 +110,24 @@ export default function Navbar() {
 								</Button>
 							</a>
 						))}
+						<Button variant={"outline"}>
+							<a
+								href="https://www.linkedin.com/in/steven-fojas-8a1516241/"
+								rel="noreferrer noopener"
+								target="__blank"
+							>
+								LinkedIn
+							</a>
+						</Button>
+						<Button variant={"outline"}>
+							<a
+								href="https://github.com/stevenfojas670"
+								rel="noreferrer noopener"
+								target="__blank"
+							>
+								GitHub
+							</a>
+						</Button>
 					</div>
 				</nav>
 			</div>
