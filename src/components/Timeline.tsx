@@ -70,9 +70,6 @@ export default function Timeline() {
 						<div className="bg-card border-card-20 border-1 rounded-lg px-8 py-6 w-full sm:w-xl">
 							<div className="text-xl font-medium">{job.role}</div>
 							<div>{job.company}</div>
-							<div className="mb-4 sm:text-sm">
-								{job.location} <span className="sm:hidden">{job.duration}</span>
-							</div>
 							<div className="lg:hidden mb-4">{job.duration}</div>
 							{isExpanded ? (
 								<div className="mb-4">
