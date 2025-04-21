@@ -20,9 +20,8 @@ export const experiences = [
 				id: 1,
 				title: "System Management, Maintenance, and Support",
 				description: [
-					"Managed, maintained and supported F5 BIG-IP LTM, ASM, APM, and GTM performing load balancing configurations for internal and external traffic to our web applications, servers, etc.",
+					"Managed, maintained and supported F5 BIG-IP systems performing load balancing configurations for internal and external traffic to our web applications, servers, etc.",
 					"Performed Local Traffic Management configurations such as setting up virtual servers for web applications on HTTP/HTTPS with health monitoring, persistence profiles to maintain sessions across servers, SSL encryption and decryption for packet analysis, and URL redirects with iRules.",
-					"Performed Application Security Management configurations such as creating or editing allow or deny rules for client-server communication such as HTTP requests.",
 					"Troubleshoot infrastructure application or network communication issues using packet analysis with Wireshark, log analysis built-in log systems in infrastructure applications or TCPDUMP, and working with multiple IT infrastructure teams to identify root cause.",
 					"Managed, maintained and supported our certificate management application AppViewX through Certificate Service Request (CSR) policy creation, certificate expiry report configurations, and certificate discovery scanning.",
 					"Performed troubleshooting across all layers of the OSI model.",
