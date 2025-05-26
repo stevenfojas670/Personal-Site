@@ -14,6 +14,7 @@ export const experiences = [
 			"Certificate Management",
 			"Automation",
 			"Network Configuration",
+			"Microsoft DNS",
 		],
 		details: [
 			{
@@ -26,6 +27,7 @@ export const experiences = [
 					"Managed, maintained and supported our certificate management application AppViewX through Certificate Service Request (CSR) policy creation, certificate expiry report configurations, and certificate discovery scanning.",
 					"Performed troubleshooting across all layers of the OSI model.",
 					"Assisted in switch racking and stacking following wiring and rack diagrams.",
+					"Configured and managed Microsoft DNS for internal and external domains, including DNS record creation, updates, and troubleshooting.",
 				],
 			},
 			{
@@ -92,10 +94,11 @@ export const experiences = [
 				id: 1,
 				title: "Developed an Internal Applicaton for Internal Affairs",
 				description: [
-					"Developed an internal application to track physical signs across Mission Support and Test Services sites, streamlining facility management for Internal Affairs and Facilities staff.",
-					"Designed and implemented the frontend using jQuery, HTML/CSS, Razor Pages, and Bootstrap 5 for responsive user experience.",
-					"Built the backend with .NET 7, C#, and Entity Framework ORM, utilizing the Model-View-Controller pattern.",
-					"Utilized SQL Server Management Studio (SSMS) for database management and executed database queries using LINQ with Entity Framework.",
+					"Developed a multipage internal web application to track physical signage across multiple facilities for the HR department.",
+					"Built the frontend using Razor Pages (.NET 7), jQuery, and Bootstrap 5 implementing interactive tables, buttons, modals, accordions and form validation.",
+					"Designed and implemented backend logic in C# using .NET 7 and Entity Framework for CRUD operations with a Microsoft SQL Server database.",
+					"Integrated SMTP-based email notifications to alert facility managers of assigned signage tasks.",
+					"Enabled HR staff to assign tasks to facility managers, who update task statuses and document sign placements through the system.",
 					"Followed a Hybrid Agile methodology, working 2-week sprints over 4 months to iteratively refine and enhance the application.",
 					"Performed weekly standups within a team of 8 developers.",
 				],
