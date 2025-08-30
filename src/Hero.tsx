@@ -23,7 +23,7 @@ export default function Hero() {
 						<a href="#certifications">Certifications</a>
 					</Button>
 					<Button className="bg-accent hover:bg-accent/90">
-						<a href="/pdfs/Resume.pdf" target="__blank">
+						<a href="/pdfs/StevenFojas.pdf" target="__blank">
 							Resume
 						</a>
 					</Button>

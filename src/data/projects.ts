@@ -126,4 +126,18 @@ export const projects = [
 		],
 		link: "https://github.com/stevenfojas670/JavaScript",
 	},
+	{
+		id: 5,
+		title: "2D Physics Engine",
+		description: `This is a 2D physics engine built with vanilla Javascript. Currently there are 3 shapes that can be controlled by the user and a simple collision detection
+		system. The goal is to eventually implement allow the user to treat this as a sandbox where they can spawn in objects to move, launch, bounce, crush, or destroy things.
+		I want users to be able to create some random, simple, fun, and interesting simulations. Eventually I'll create a 3D physics engine similar to the one Half Life 2 uses.`,
+		details: [
+			"Built a 2D vector class for that performs simple linear algebra such as vector addition, subtraction, distance checking, dot product and normalization.",
+			"Built collision detection for between circles, polygons and rectangles.",
+			"Todo: Implement RigidBody, forces, collision resolution, different joints, user interaction",
+		],
+		stack: [],
+		link: "https://github.com/stevenfojas670/2D-Physics-Engine",
+	},
 ]
