@@ -9,8 +9,8 @@ export default function About() {
 				</h1>
 				<div>
 					<p>
-						Welcome to my page! I'm a Senior Computer Science major at the
-						University of Nevada, Las Vegas and I currently work with Southwest
+						Welcome to my page! I'm a recent Computer Science graduate from the
+						University of Nevada, Las Vegas. I currently work with the Southwest
 						Gas Corporation as a Network Analyst Intern.
 					</p>
 					<br></br>
@@ -26,19 +26,16 @@ export default function About() {
 					</p>
 					<br></br>
 					<p>
-						As of 2025, I'm set to graduate in August and plan to further
-						enhance my expertise by pursuing the AWS Solutions Architect and
-						CompTIA CySA+ certifications. Additionally, I'm expanding my
-						knowledge in network infrastructure device configuration,
-						maintenance, and security while refining my Application Development
-						skills, particularly with React, Python, and Django.
+						I'm currently studying for the AWS Solutions Architect exam, working
+						on a 2D physics engine in JavaScript, and coaching middle school
+						basketball.
 					</p>
 					<br></br>
 					<p>
 						I'm actively seeking opportunities in Cybersecurity, Software
-						Engineering, Cloud Engineering, Network Engineering, or really any
-						sort of IT operations. I'm always open to any new opportunities and
-						ready to put in whatever work that needs to be done to get there.
+						Engineering, Cloud Engineering, Network Engineering, and Data
+						Science. I'm always open to any new opportunities and ready to put
+						in whatever work that needs to be done to get there.
 					</p>
 				</div>
 			</Container>

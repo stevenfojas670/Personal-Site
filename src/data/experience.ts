@@ -63,6 +63,26 @@ export const experiences = [
 	},
 	{
 		id: 2,
+		role: "AAU/Middle School Basketball Coach",
+		company: "Las Vegas Dreamers/Greenspun Junior High",
+		duration: "June 2025 - Current",
+		etc: "",
+		location: "Henderson, Nevada",
+		tech: ["Basketball"],
+		details: [
+			{
+				id: 1,
+				title: "Training and Coaching",
+				description: [
+					"Teaching basics of footwork, shooting, dribbling, and defending.",
+					"Teaching off-ball movement, offensive/defensive positioning, and communication.",
+					"Teaching the importance of perseverance, attitude, and work ethic.",
+				],
+			},
+		],
+	},
+	{
+		id: 3,
 		role: "Web Development Intern",
 		company: "NeuroNexum",
 		duration: "January 2024 - June 2024",
@@ -82,7 +102,7 @@ export const experiences = [
 		],
 	},
 	{
-		id: 3,
+		id: 4,
 		role: "Full Stack Development Intern",
 		company: "Mission Services and Test Support",
 		duration: "May 2023 - August 2023",
@@ -106,7 +126,7 @@ export const experiences = [
 		],
 	},
 	{
-		id: 4,
+		id: 5,
 		role: "IT Services Technician",
 		company: "University of Nevada, Las Vegas",
 		duration: "August 2022 - August 2024",
@@ -128,7 +148,7 @@ export const experiences = [
 		],
 	},
 	{
-		id: 5,
+		id: 6,
 		role: "Tiler",
 		company: "Spartan Pools",
 		duration: "December 2021 - July 2022",
@@ -149,7 +169,7 @@ export const experiences = [
 		],
 	},
 	{
-		id: 6,
+		id: 7,
 		role: "Senior Recreation Assistant",
 		company: "City of Henderson",
 		duration: "August 2018 - August 2020",
@@ -179,7 +199,7 @@ export const experiences = [
 		],
 	},
 	{
-		id: 7,
+		id: 8,
 		role: "Bagger",
 		company: "Smith's Food and Drug",
 		duration: "March 2018 - August 2018",
