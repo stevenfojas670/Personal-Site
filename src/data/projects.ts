@@ -56,6 +56,20 @@ export const projects = [
 	},
 	{
 		id: 2,
+		title: "2D Physics Engine",
+		description: `This is a 2D physics engine built with vanilla Javascript. Currently there are 3 shapes that can be controlled by the user and a simple collision detection
+		system. The goal is to eventually implement allow the user to treat this as a sandbox where they can spawn in objects to move, launch, bounce, crush, or destroy things.
+		I want users to be able to create some random, simple, fun, and interesting simulations. Eventually I'll create a 3D physics engine similar to the one Half Life 2 uses.`,
+		details: [
+			"Built a 2D vector class for that performs simple linear algebra such as vector addition, subtraction, distance checking, dot product and normalization.",
+			"Built collision detection for between circles, polygons and rectangles.",
+			"Todo: Implement RigidBody, forces, collision resolution, different joints, user interaction",
+		],
+		stack: [],
+		link: "https://github.com/stevenfojas670/2D-Physics-Engine",
+	},
+	{
+		id: 3,
 		title: "Class Scraper",
 		description: `A Python web scraper using Selenium that automates the downloading of videos and PDFs 
         from my class Canvas pages. It organizes the files into separate folders based on modules, allowing 
@@ -77,7 +91,7 @@ export const projects = [
 		link: "https://github.com/stevenfojas670/Class-Scraper",
 	},
 	{
-		id: 3,
+		id: 4,
 		title: "Personal-Site",
 		description: `This would be this website! I've developed this website as a portfolio to briefly show off some of my skills, past projects,
         work experience, and some of my career and life goals.`,
@@ -98,46 +112,5 @@ export const projects = [
 			},
 		],
 		link: "https://github.com/stevenfojas670/Personal-Site",
-	},
-	{
-		id: 4,
-		title: "Weather App",
-		description: `This is simple weather app built using express.js and WeatherAPI. I've built this simply to
-        work on my Javascript fundamentals before working on PRISM using React on the frontend.`,
-		details: [
-			"The user can type in a location and retrieve temperature data using the WeatherAPI.",
-			"Multiple locations can be displayed at once.",
-			"Utilizes an expressjs backend with a single defined route and controller for API requests.",
-			"Experimented with a logging system to log API calls.",
-			"Logs tracked timestamps, HTTP request method type, url, response, etc using morgan.",
-			"Eventually I'd like to look into how to using anomaly detection on user activites through API requests.",
-		],
-		stack: [
-			{
-				id: 1,
-				section: "Frontend",
-				technologies: ["Javascript", "HTML/CSS"],
-			},
-			{
-				id: 2,
-				section: "Backend",
-				technologies: ["Expressjs", "WeatherAPI", "Nodejs", "morgan"],
-			},
-		],
-		link: "https://github.com/stevenfojas670/JavaScript",
-	},
-	{
-		id: 5,
-		title: "2D Physics Engine",
-		description: `This is a 2D physics engine built with vanilla Javascript. Currently there are 3 shapes that can be controlled by the user and a simple collision detection
-		system. The goal is to eventually implement allow the user to treat this as a sandbox where they can spawn in objects to move, launch, bounce, crush, or destroy things.
-		I want users to be able to create some random, simple, fun, and interesting simulations. Eventually I'll create a 3D physics engine similar to the one Half Life 2 uses.`,
-		details: [
-			"Built a 2D vector class for that performs simple linear algebra such as vector addition, subtraction, distance checking, dot product and normalization.",
-			"Built collision detection for between circles, polygons and rectangles.",
-			"Todo: Implement RigidBody, forces, collision resolution, different joints, user interaction",
-		],
-		stack: [],
-		link: "https://github.com/stevenfojas670/2D-Physics-Engine",
 	},
 ]

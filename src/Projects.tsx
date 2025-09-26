@@ -45,7 +45,7 @@ export default function Projects() {
 										<div className="mb-2">
 											<h1 className="mb-2 font-bold">Github Link</h1>
 											<a
-												href="https://github.com/stevenfojas670/Class-Scraper"
+												href={project.link}
 												target="__blank"
 												className="text-blue-300 hover:border-b-1 hover:border-blue-300"
 											>
